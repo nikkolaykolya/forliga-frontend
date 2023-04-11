@@ -1,0 +1,101 @@
+header {
+  background: url("../../images/header/main_bg.png") no-repeat;
+  background-size: cover;
+  padding: 15px 0;
+  .header__content {
+    @include default-width;
+    display: flex;
+    .header__logo {
+      display: block;
+      margin-right: 13px;
+      img {
+
+      }
+    }
+    .header__right {
+      width: 100%;
+      .header__top {
+        display: flex;
+        justify-content: space-between;
+        .header__first-btns {
+          display: flex;
+          gap: 10px;
+          li {
+            @include default-btn;
+            a {
+              width: 131px;
+            }
+          }
+        }
+        .header__tabs {
+          display: flex;
+          gap: 53px;
+          align-items: center;
+          li {
+            a {
+              color: white;
+              font-size: 15px;
+              line-height: 18px;
+              padding-bottom: 8px;
+              transition: all $anim;
+              border-bottom: 1px solid transparent;
+              &:hover {
+                border-color: #ED0073;
+              }
+            }
+          }
+        }
+        .header__last-btns {
+          display: flex;
+          gap: 10px;
+          li {
+            border: 1.5px solid #005DDB;
+            transition: all $anim;
+              a {
+              width: 131px;
+              display: block;
+              font-size: 14px;
+              line-height: 16px;
+              padding: 10px 0;
+              text-align: center;
+              color: white;
+            }
+            &:hover {
+              background: #005DDB;
+            }
+          }
+        }
+      }
+      .header__bottom {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 18px;
+        ul {
+          display: flex;
+          gap: 30px;
+          li {
+            padding-bottom: 8px;
+            border-bottom: 1px solid transparent;
+            transition: all $anim;
+            a {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              img {
+
+              }
+              span {
+                font-size: 14px;
+                line-height: 16px;
+                color: white;
+              }
+            }
+            &:hover {
+              border-color: #005DDB;
+            }
+          }
+        }
+      }
+    }
+  }
+}

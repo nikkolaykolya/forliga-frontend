@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+header {
+  background: url("../../images/header/main_bg.png") no-repeat;
+  background-size: cover;
+  padding: 15px 0;
+}
+header .header__content {
+  width: 81%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+}
+@media (max-width: 750px) {
+  header .header__content {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+header .header__content .header__logo {
+  display: block;
+  margin-right: 13px;
+}
+header .header__content .header__right {
+  width: 100%;
+}
+header .header__content .header__right .header__top {
+  display: flex;
+  justify-content: space-between;
+}
+header .header__content .header__right .header__top .header__first-btns {
+  display: flex;
+  gap: 10px;
+}
+header .header__content .header__right .header__top .header__first-btns li {
+  border: 1.5px solid #ED0073;
+  transition: all 0.3s ease;
+}
+header .header__content .header__right .header__top .header__first-btns li a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  display: block;
+}
+header .header__content .header__right .header__top .header__first-btns li:hover {
+  background: #ED0073;
+}
+header .header__content .header__right .header__top .header__first-btns li a {
+  width: 131px;
+}
+header .header__content .header__right .header__top .header__tabs {
+  display: flex;
+  gap: 53px;
+  align-items: center;
+}
+header .header__content .header__right .header__top .header__tabs li a {
+  color: white;
+  font-size: 15px;
+  line-height: 18px;
+  padding-bottom: 8px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+header .header__content .header__right .header__top .header__tabs li a:hover {
+  border-color: #ED0073;
+}
+header .header__content .header__right .header__top .header__last-btns {
+  display: flex;
+  gap: 10px;
+}
+header .header__content .header__right .header__top .header__last-btns li {
+  border: 1.5px solid #005DDB;
+  transition: all 0.3s ease;
+}
+header .header__content .header__right .header__top .header__last-btns li a {
+  width: 131px;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+}
+header .header__content .header__right .header__top .header__last-btns li:hover {
+  background: #005DDB;
+}
+header .header__content .header__right .header__bottom {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 18px;
+}
+header .header__content .header__right .header__bottom ul {
+  display: flex;
+  gap: 30px;
+}
+header .header__content .header__right .header__bottom ul li {
+  padding-bottom: 8px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+header .header__content .header__right .header__bottom ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .header__content .header__right .header__bottom ul li a span {
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+}
+header .header__content .header__right .header__bottom ul li:hover {
+  border-color: #005DDB;
+}
+
+body {
+  color: white;
+  background: #21063B;
+  font-family: "Roboto", sans-serif;
+}
+
+.slider .slider__content li img {
+  max-height: 565px;
+  object-position: center;
+  object-fit: cover;
+}
+.slider .slider__content .owl-dots {
+  text-align: center;
+  padding-bottom: 11px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.slider .slider__content .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  margin-right: 7.5px;
+  transition: background 0.3s ease;
+  border-radius: 50%;
+}
+.slider .slider__content .owl-dots .owl-dot:last-child {
+  margin: 0;
+}
+.slider .slider__content .owl-dots .owl-dot.active {
+  background: white;
+}
+
+/*# sourceMappingURL=main.css.map */
