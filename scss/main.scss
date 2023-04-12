@@ -34,3 +34,117 @@
     }
   }
 }
+
+.game-nav {
+  padding-top: 35px;
+  .game-nav__content {
+    @include default-width;
+    display: flex;
+    gap: 30px;
+    .game-nav__search {
+      width: 270px;
+      flex-shrink: 1;
+      label {
+        position: relative;
+        padding: 9px 0;
+        border: 1px solid #ED0073;
+        display: block;
+        width: 100%;
+        input {
+          width: 100%;
+          background: 0;
+          padding: 0 18px 0 40px;
+          border: none;
+          font-size: 14px;
+          line-height: 16px;
+          outline: none;
+          box-sizing: border-box;
+          color: white;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          left: 16px;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 20px;
+          height: 20px;
+          background: url("../images/main/search.png");
+        }
+      }
+    }
+    .game-nav__tabs {
+      flex-shrink: 10;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      li {
+        @include default-btn;
+        a {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+.games {
+  padding-top: 21px;
+  .games__content {
+    @include default-width;
+    display: flex;
+    gap: 30px;
+    .games__left {
+      width: 270px;
+      .games__all-providers {
+        font-size: 14px;
+        line-height: 16px;
+        color: white;
+        display: block;
+        background: #ED0073;
+        border: 1px solid #ED0073;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .games__ads {
+        padding-top: 29px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        li {
+          a {
+            img {
+              max-height: 433px;
+            }
+          }
+          &:first-child {
+            a {
+              img {
+                max-height: 371px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .games__right {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      li {
+        width: 270px;
+        height: 203px;
+        a {
+          display: block;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+}
