@@ -2,6 +2,11 @@ header {
   background: url("../../images/header/main_bg.png") no-repeat;
   background-size: cover;
   padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   .header__content {
     @include default-width;
     display: flex;
@@ -43,6 +48,16 @@ header {
                 border-color: #ED0073;
               }
             }
+          }
+        }
+        .header__balance {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          .header__balance-value {
+            font-size: 25px;
+            line-height: 29px;
+            color: white;
           }
         }
         .header__last-btns {

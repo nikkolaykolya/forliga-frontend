@@ -71,6 +71,30 @@
           height: 20px;
           background: url("../images/main/search.png");
         }
+        .game-nav__search-drop {
+          position: absolute;
+          top: 50px;
+          left: -1px;
+          border: 1px solid #ED0073;
+          padding: 9px 18px;
+          background: #ED0073;
+          width: 101%;
+          display: none;
+          flex-direction: column;
+          gap: 8px;
+          max-height: 200px;
+          overflow: auto;
+          a {
+            display: block;
+            font-size: 14px;
+            line-height: 16px;
+            color: white;
+            text-align: center;
+          }
+          &.show {
+            display: flex;
+          }
+        }
       }
     }
     .game-nav__tabs {

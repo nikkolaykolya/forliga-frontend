@@ -66,6 +66,11 @@ header {
   background: url("../../images/header/main_bg.png") no-repeat;
   background-size: cover;
   padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 header .header__content {
   width: 81%;
@@ -128,6 +133,16 @@ header .header__content .header__right .header__top .header__tabs li a {
 }
 header .header__content .header__right .header__top .header__tabs li a:hover {
   border-color: #ED0073;
+}
+header .header__content .header__right .header__top .header__balance {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .header__content .header__right .header__top .header__balance .header__balance-value {
+  font-size: 25px;
+  line-height: 29px;
+  color: white;
 }
 header .header__content .header__right .header__top .header__last-btns {
   display: flex;
@@ -223,6 +238,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  margin-top: 121px;
+}
+
 .slider .slider__content li img {
   max-height: 565px;
   object-position: center;
@@ -299,6 +318,30 @@ body {
   width: 20px;
   height: 20px;
   background: url("../images/main/search.png");
+}
+.game-nav .game-nav__content .game-nav__search label .game-nav__search-drop {
+  position: absolute;
+  top: 50px;
+  left: -1px;
+  border: 1px solid #ED0073;
+  padding: 9px 18px;
+  background: #ED0073;
+  width: 101%;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow: auto;
+}
+.game-nav .game-nav__content .game-nav__search label .game-nav__search-drop a {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  text-align: center;
+}
+.game-nav .game-nav__content .game-nav__search label .game-nav__search-drop.show {
+  display: flex;
 }
 .game-nav .game-nav__content .game-nav__tabs {
   flex-shrink: 10;
