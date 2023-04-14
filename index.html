@@ -53,13 +53,13 @@
                                 <span>Бонусы</span>
                             </a>
                         </li>
-                        <li>
+                        <li id="startBtn">
                             <a href="##">
                                 <img src="images/header/question.svg" alt="">
                                 <span>С чего начать</span>
                             </a>
                         </li>
-                        <li>
+                        <li id="contacts">
                             <a href="##">
                                 <img src="images/header/book.svg" alt="">
                                 <span>Контакты</span>
@@ -70,6 +70,113 @@
             </div>
         </div>
     </header>
+    <div class="popups">
+        <div class="chat-form" id="chatForm">
+            <div class="chat-form__content">
+                <div class="chat-form__cross cross" id="chatExit">
+                    <img src="images/popups/close.svg" alt="">
+                </div>
+                <div class="chat-form__left">
+                    <h3 class="chat-form__title">Форма обратной связи</h3>
+                    <p class="chat-form__text">Оставьте свой  вопрос и мы свяжемся с вами</p>
+                    <form>
+                        <label>
+                            <input type="text" id="chatName" name="name" placeholder="Ваше имя">
+                        </label>
+                        <label>
+                            <input type="tel" id="chatTel" name="phone" placeholder="телефон">
+                        </label>
+                        <label>
+                            <input type="email" id="chatMail" name="email" placeholder="E-mail">
+                        </label>
+                        <label>
+                            <textarea id="chatMessage" name="message" placeholder="Ваш вопрос"></textarea>
+                        </label>
+                        <label>
+                            <button id="chatSubmit" type="submit">отправить</button>
+                        </label>
+                    </form>
+                </div>
+                <div class="chat-form__right">
+                    <img src="images/popups/chat_img.jpg" loading="lazy" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="start-popup" id="startPopup">
+            <div class="start-popup__content">
+                <div class="start-popup__cross cross" id="startExit">
+                    <img src="images/popups/close.svg" alt="">
+                </div>
+                <div class="start-popup__top">
+                    <div class="start-popup__steps">
+                        <h4 class="start-popup__title">С ЧЕГО НАЧАТЬ:</h4>
+                        <p class="start-popup__subtitle">Начать играть очень просто. </p>
+                        <ul>
+                            <li>
+                                <p>ШАГ 1:</p>
+                                <span>Регистрация</span>
+                            </li>
+                            <li>
+                                <p>ШАГ 2:</p>
+                                <span>Пополнить счет</span>
+                            </li>
+                            <li>
+                                <p>ШАГ 3:</p>
+                                <span>Выигрывать!</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="start-popup__image">
+                        <img src="images/popups/start.jpg" alt="">
+                    </div>
+                </div>
+                <div class="start-popup__bottom">
+                    <h5 class="start-popup__important">ВАЖНО:</h5>
+                    <p class="start-popup__text">При создании аккаунта важно указывать достоверные данные во избежание казусов в будущем.
+                        Все данные находятся в строгой конфиденциальности и ни в коем случае не будут переданы третьим лицам.
+                        Выполнив эти простые требования Вы можете беспрепятственно играть в одном из самых лучших и популярных казино в интернете.</p>
+                </div>
+            </div>
+        </div>
+        <div class="enter-popup" id="enterPopup">
+            <div class="enter-popup__content">
+                <div class="enter-popup__cross cross" id="enterExit">
+                    <img src="images/popups/close.svg" alt="">
+                </div>
+                <div class="enter-popup__left">
+                    <h4 class="enter-popup__title">ВОЙТИ В УЧЕТНУЮ ЗАПИСЬ</h4>
+                    <div class="enter-popup__tabs">
+                        <a href="##">по e-mail </a>
+                        <a href="##">по SMS</a>
+                    </div>
+                    <form>
+                        <label>
+                            <input type="email" name="email" placeholder="E-MAIL">
+                        </label>
+                        <label>
+                            <input type="password" name="password" placeholder="ПАРОЛЬ">
+                        </label>
+                        <label>
+                            <button type="submit">ВОЙТИ</button>
+                        </label>
+                    </form>
+                    <div class="enter-popup__bottom">
+                        <div class="enter-popup__forget">
+                            <p class="enter-popup__forget-text">Забыли пароль?</p>
+                            <a href="##" class="enter-popup__forget-btn">ВОССТАНОВИТЬ</a>
+                        </div>
+                        <div class="enter-popup__registration">
+                            <p class="enter-popup__registration-text">Еще нет <a href="##">АККАУНТА?</a></p>
+                            <a href="##" class="enter-popup__registration-btn">РЕГИСТРАЦИЯ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="enter-popup__right">
+                    <img src="images/popups/enter_img.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <section class="slider">
             <ul class="slider__content owl-carousel">
