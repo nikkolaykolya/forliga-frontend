@@ -222,46 +222,298 @@
           line-height: 145%;
           border: 1px solid #ED0073;
           text-transform: uppercase;
-          &:first-child {
+          color: white;
+          text-align: center;
+          transition: all $anim;
+          &.active {
             background: #ED0073;
           }
-        }
-      }
-      form {
-        padding-top: 18px;
-        label {
-          input {
-
-          }
-          button {
-
+          &:hover {
+            background: rgba(237, 0, 115, .7);
           }
         }
       }
-      .enter-popup__bottom {
-        .enter-popup__forget {
-          .enter-popup__forget-text {
-
+      .enter-popup__forms {
+        .enter-popup__mail-form {
+          form {
+            padding-top: 18px;
+            display: none;
+            &.active {
+              display: block;
+            }
+            label {
+              margin-top: 20px;
+              display: block;
+              &:first-child {
+                margin-top: 0;
+              }
+              input {
+                font-weight: 600;
+                font-size: 10px;
+                line-height: 145%;
+                padding: 12px 21px 13px;
+                text-transform: uppercase;
+                color: white;
+                background: none;
+                border: 1px solid #ED0073;
+                outline: none;
+                display: block;
+                width: 100%;
+                &::placeholder {
+                  color: white;
+                }
+              }
+              button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 145%;
+                color: white;
+                background: #ED0073;
+                border: none;
+                outline: none;
+                padding: 10.5px 0;
+                width: 100%;
+              }
+            }
           }
-          .enter-popup__forget-btn {
-
-          }
-        }
-        .enter-popup__registration {
-          .enter-popup__registration-text {
-
-          }
-          .enter-popup__registration-btn {
-
+          .enter-popup__bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 40px;
+            .enter-popup__forget {
+              width: 185px;
+              text-align: center;
+              .enter-popup__forget-text {
+                font-size: 15px;
+                line-height: 18px;
+              }
+              .enter-popup__forget-btn {
+                display: block;
+                margin-top: 15px;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 145%;
+                color: white;
+                width: 100%;
+                text-align: center;
+                padding: 10.5px 0;
+                border: 1px solid #ED0073;
+              }
+            }
+            .enter-popup__registration {
+              width: 185px;
+              text-align: center;
+              .enter-popup__registration-text {
+                font-size: 15px;
+                line-height: 18px;
+                a {
+                  text-transform: uppercase;
+                  color: #ED0073;
+                }
+              }
+              .enter-popup__registration-btn {
+                display: block;
+                margin-top: 15px;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 145%;
+                color: white;
+                width: 100%;
+                text-align: center;
+                padding: 10.5px 0;
+                border: 1px solid #ED0073;
+                background: #ED0073;
+              }
+            }
           }
         }
       }
     }
     .enter-popup__right {
       padding-right: 20px;
+      padding-top: 11px;
       img {
 
       }
     }
+  }
+}
+
+.registration-popup {
+  @include default-popup;
+  .registration-popup__content {
+    display: flex;
+    justify-content: space-between;
+   .registration-popup__left {
+     width: 390px;
+     margin-top: 15px;
+     .registration-popup__title {
+       font-family: 'Oswald', serif;
+       font-weight: 600;
+       font-size: 35px;
+       line-height: 145%;
+       color: #ED0073;
+     }
+     .registration-popup__tabs {
+       display: flex;
+       gap: 11px;
+       padding-top: 29px;
+       a {
+         display: block;
+         width: 100px;
+         padding: 6.5px 0;
+         font-weight: 700;
+         font-size: 8px;
+         line-height: 145%;
+         border: 1px solid #ED0073;
+         text-transform: uppercase;
+         color: white;
+         text-align: center;
+         transition: all $anim;
+         &.active {
+           background: #ED0073;
+         }
+         &:hover {
+           background: rgba(237, 0, 115, .7);
+         }
+       }
+     }
+     .registration-popup__forms {
+       padding-top: 16px;
+       .registration-popup__mail-form {
+         form {
+           display: none;
+           &.active {
+             display: block;
+           }
+           >label {
+             display: block;
+             &:first-child {
+               margin-bottom: 20px;
+             }
+             input[type=email], input[type=password], input[type=tel] {
+               font-weight: 600;
+               font-size: 10px;
+               line-height: 145%;
+               padding: 12px 21px 13px;
+               text-transform: uppercase;
+               color: white;
+               background: none;
+               border: 1px solid #ED0073;
+               outline: none;
+               display: block;
+               width: 100%;
+               &::placeholder {
+                 color: white;
+               }
+             }
+             button {
+              display: block;
+               border: none;
+               text-align: center;
+               width: 220px;
+               padding: 10.5px 0;
+               background: #ed0073;
+               margin-top: 28px;
+               color: white;
+               cursor: pointer;
+             }
+           }
+           .registration-popup__choose-currency {
+             display: flex;
+             padding-top: 27px;
+             align-items: center;
+             width: 100%;
+             .registration-popup__choose-currency__text {
+               font-size: 15px;
+               line-height: 18px;
+               padding-right: 12px;
+               flex-shrink: 0;
+             }
+             .registration-popup__choose-currency__tabs {
+               display: flex;
+               justify-content: space-between;
+               width: 100%;
+               label {
+                 display: block;
+                 input {
+                   display: none;
+                 }
+                 span {
+                   font-weight: 700;
+                   font-size: 10px;
+                   line-height: 145%;
+                   display: block;
+                   text-align: center;
+                   width: 56px;
+                   padding: 7.5px 0;
+                   border: 1px solid #ED0073;
+                   cursor: pointer;
+                 }
+                 & > input[type=radio]:checked + span {
+                   background: #ED0073;
+                 }
+               }
+             }
+           }
+           .registration-popup__extra {
+             font-size: 15px;
+             line-height: 18px;
+             color: #ED0073;
+             padding: 20px 0;
+           }
+           .registration-popup__checkbox-label {
+             display: flex;
+             align-items: center;
+             cursor: pointer;
+             &:last-child {
+               margin-top: 15px;
+             }
+             input[type=checkbox] {
+               display: none;
+             }
+             span {
+               display: block;
+               width: 14px;
+               height: 14px;
+               border: 2px solid #ed0073;
+               position: relative;
+             }
+             p {
+               font-weight: 300;
+               font-size: 15px;
+               line-height: 18px;
+               padding-left: 15px;
+               a {
+                 color: white;
+                 text-decoration: underline!important;
+               }
+             }
+             & > input[type=checkbox]:checked + span:before {
+               content: "";
+               position: absolute;
+               left: 50%;
+               top: 50%;
+               transform: translate(-50%, -50%);
+               width: 6px;
+               height: 6px;
+               background: #ed0073;
+             }
+           }
+         }
+       }
+     }
+   }
+   .registration-popup__right {
+     padding-right: 20px;
+     padding-top: 11px;
+     img {
+
+     }
+   }
   }
 }

@@ -223,13 +223,20 @@ footer .footer__content .footer__right {
   justify-content: flex-end;
   gap: 16px;
 }
-footer .footer__content .footer__right li a {
+footer .footer__content .footer__right li {
   text-align: right;
-  display: block;
+}
+footer .footer__content .footer__right li a {
+  display: inline-block;
   font-weight: 300;
   font-size: 15px;
   line-height: 140%;
   color: white;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+footer .footer__content .footer__right li a:hover {
+  border-bottom: 1px solid #ED0073;
 }
 
 .chat-form {
@@ -521,15 +528,322 @@ footer .footer__content .footer__right li a {
   line-height: 145%;
   border: 1px solid #ED0073;
   text-transform: uppercase;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
 }
-.enter-popup .enter-popup__content .enter-popup__left .enter-popup__tabs a:first-child {
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__tabs a.active {
   background: #ED0073;
 }
-.enter-popup .enter-popup__content .enter-popup__left form {
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__tabs a:hover {
+  background: rgba(237, 0, 115, 0.7);
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form {
   padding-top: 18px;
+  display: none;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form.active {
+  display: block;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label {
+  margin-top: 20px;
+  display: block;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label:first-child {
+  margin-top: 0;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 21px 13px;
+  text-transform: uppercase;
+  color: white;
+  background: none;
+  border: 1px solid #ED0073;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label input::placeholder {
+  color: white;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  background: #ED0073;
+  border: none;
+  outline: none;
+  padding: 10.5px 0;
+  width: 100%;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__forget {
+  width: 185px;
+  text-align: center;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__forget .enter-popup__forget-text {
+  font-size: 15px;
+  line-height: 18px;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__forget .enter-popup__forget-btn {
+  display: block;
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10.5px 0;
+  border: 1px solid #ED0073;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration {
+  width: 185px;
+  text-align: center;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration .enter-popup__registration-text {
+  font-size: 15px;
+  line-height: 18px;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration .enter-popup__registration-text a {
+  text-transform: uppercase;
+  color: #ED0073;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration .enter-popup__registration-btn {
+  display: block;
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10.5px 0;
+  border: 1px solid #ED0073;
+  background: #ED0073;
 }
 .enter-popup .enter-popup__content .enter-popup__right {
   padding-right: 20px;
+  padding-top: 11px;
+}
+.registration-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100000;
+  display: none;
+}
+.registration-popup > div {
+  background: #21063B;
+  border: 1px solid #005DDB;
+  padding: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-height: 573px;
+  max-width: 970px;
+}
+.registration-popup > div .cross {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #ED0073;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.registration-popup > div .cross img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.registration-popup.show {
+  display: block;
+}
+.registration-popup .registration-popup__content {
+  display: flex;
+  justify-content: space-between;
+}
+.registration-popup .registration-popup__content .registration-popup__left {
+  width: 390px;
+  margin-top: 15px;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__title {
+  font-family: "Oswald", serif;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 145%;
+  color: #ED0073;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs {
+  display: flex;
+  gap: 11px;
+  padding-top: 29px;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs a {
+  display: block;
+  width: 100px;
+  padding: 6.5px 0;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 145%;
+  border: 1px solid #ED0073;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs a.active {
+  background: #ED0073;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs a:hover {
+  background: rgba(237, 0, 115, 0.7);
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms {
+  padding-top: 16px;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form {
+  display: none;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form.active {
+  display: block;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label {
+  display: block;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label:first-child {
+  margin-bottom: 20px;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=email], .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=password], .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=tel] {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 21px 13px;
+  text-transform: uppercase;
+  color: white;
+  background: none;
+  border: 1px solid #ED0073;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=email]::placeholder, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=password]::placeholder, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=tel]::placeholder {
+  color: white;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label button {
+  display: block;
+  border: none;
+  text-align: center;
+  width: 220px;
+  padding: 10.5px 0;
+  background: #ed0073;
+  margin-top: 28px;
+  color: white;
+  cursor: pointer;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency {
+  display: flex;
+  padding-top: 27px;
+  align-items: center;
+  width: 100%;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__text {
+  font-size: 15px;
+  line-height: 18px;
+  padding-right: 12px;
+  flex-shrink: 0;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__tabs label {
+  display: block;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__tabs label input {
+  display: none;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__tabs label span {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  display: block;
+  text-align: center;
+  width: 56px;
+  padding: 7.5px 0;
+  border: 1px solid #ED0073;
+  cursor: pointer;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__tabs label > input[type=radio]:checked + span {
+  background: #ED0073;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__extra {
+  font-size: 15px;
+  line-height: 18px;
+  color: #ED0073;
+  padding: 20px 0;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label:last-child {
+  margin-top: 15px;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label input[type=checkbox] {
+  display: none;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ed0073;
+  position: relative;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label p a {
+  color: white;
+  text-decoration: underline !important;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label > input[type=checkbox]:checked + span:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: #ed0073;
+}
+.registration-popup .registration-popup__content .registration-popup__right {
+  padding-right: 20px;
+  padding-top: 11px;
 }
 body {
   color: white;

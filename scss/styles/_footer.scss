@@ -24,13 +24,18 @@ footer {
       justify-content: flex-end;
       gap: 16px;
       li {
+        text-align: right;
         a {
-          text-align: right;
-          display: block;
+          display: inline-block;
           font-weight: 300;
           font-size: 15px;
           line-height: 140%;
           color: white;
+          border-bottom: 1px solid transparent;
+          transition: all $anim;
+          &:hover {
+            border-bottom: 1px solid #ED0073;
+          }
         }
       }
     }
