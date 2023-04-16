@@ -63,7 +63,7 @@ a {
 }
 
 header {
-  background: url("../../images/header/main_bg.png") no-repeat;
+  background: url("../images/header/main_bg.png") no-repeat;
   background-size: cover;
   padding: 15px 0;
   position: fixed;
@@ -194,7 +194,7 @@ header .header__content .header__right .header__bottom ul li:hover {
 
 footer {
   margin-top: 75px;
-  background: url("../../images/header/main_bg.png") no-repeat;
+  background: url("../images/header/main_bg.png") no-repeat;
   background-size: cover;
   padding: 39px 0 64px;
 }
