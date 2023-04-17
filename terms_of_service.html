@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/privacy_and_service.min.css">
+</head>
+<body>
+<header>
+  <div class="header__content">
+    <a href="##" class="header__logo">
+      <img src="images/header/logo.svg" alt="Forliga logo">
+    </a>
+    <div id="burgerBtn" class="header__burger-btn">
+      <span class="header__burger-stripe"></span>
+    </div>
+    <div class="header__right" id="burgerMenu">
+      <div class="header__top">
+        <ul class="header__first-btns">
+          <li>
+            <a href="##">Депозит</a>
+          </li>
+          <li>
+            <a href="##">Вывод денег</a>
+          </li>
+        </ul>
+        <ul class="header__tabs">
+          <li>
+            <a href="##">Онлайн игры</a>
+          </li>
+          <li>
+            <a class="active" href="##">Онлайн казино</a>
+          </li>
+          <li>
+            <a href="##">Спортивные ставки</a>
+          </li>
+        </ul>
+        <ul class="header__last-btns">
+          <li>
+            <a id="registration" href="##">Регистрация</a>
+          </li>
+          <li>
+            <a id="enter" href="##">Вход</a>
+          </li>
+        </ul>
+        <div class="header__bottom">
+          <ul>
+            <li>
+              <a href="##">
+                <img src="images/header/coins.svg" alt="">
+                <span>Бонусы</span>
+              </a>
+            </li>
+            <li id="startBtn">
+              <a href="##">
+                <img src="images/header/question.svg" alt="">
+                <span>С чего начать</span>
+              </a>
+            </li>
+            <li id="contacts">
+              <a href="##">
+                <img src="images/header/book.svg" alt="">
+                <span>Контакты</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="popups">
+  <div class="chat-form" id="chatForm">
+    <div class="chat-form__content">
+      <div class="chat-form__cross cross" id="chatExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="chat-form__left">
+        <h3 class="chat-form__title">Форма обратной связи</h3>
+        <p class="chat-form__text">Оставьте свой  вопрос и мы свяжемся с вами</p>
+        <form>
+          <label>
+            <input type="text" id="chatName" name="name" placeholder="Ваше имя">
+          </label>
+          <label>
+            <input type="tel" id="chatTel" name="phone" placeholder="телефон">
+          </label>
+          <label>
+            <input type="email" id="chatMail" name="email" placeholder="E-mail">
+          </label>
+          <label>
+            <textarea id="chatMessage" name="message" placeholder="Ваш вопрос"></textarea>
+          </label>
+          <label>
+            <button id="chatSubmit" type="submit">отправить</button>
+          </label>
+        </form>
+      </div>
+      <div class="chat-form__right">
+        <img src="images/popups/chat_img.jpg" loading="lazy" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="start-popup" id="startPopup">
+    <div class="start-popup__content">
+      <div class="start-popup__cross cross" id="startExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="start-popup__top">
+        <div class="start-popup__steps">
+          <h4 class="start-popup__title">С ЧЕГО НАЧАТЬ:</h4>
+          <p class="start-popup__subtitle">Начать играть очень просто. </p>
+          <ul>
+            <li>
+              <p>ШАГ 1:</p>
+              <span>Регистрация</span>
+            </li>
+            <li>
+              <p>ШАГ 2:</p>
+              <span>Пополнить счет</span>
+            </li>
+            <li>
+              <p>ШАГ 3:</p>
+              <span>Выигрывать!</span>
+            </li>
+          </ul>
+        </div>
+        <div class="start-popup__image">
+          <img src="images/popups/start.jpg" alt="">
+        </div>
+      </div>
+      <div class="start-popup__bottom">
+        <h5 class="start-popup__important">ВАЖНО:</h5>
+        <p class="start-popup__text">При создании аккаунта важно указывать достоверные данные во избежание казусов в будущем.
+          Все данные находятся в строгой конфиденциальности и ни в коем случае не будут переданы третьим лицам.
+          Выполнив эти простые требования Вы можете беспрепятственно играть в одном из самых лучших и популярных казино в интернете.</p>
+      </div>
+    </div>
+  </div>
+  <div class="enter-popup" id="enterPopup">
+    <div class="enter-popup__content">
+      <div class="enter-popup__cross cross" id="enterExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="enter-popup__left">
+        <h4 class="enter-popup__title">ВОЙТИ В УЧЕТНУЮ ЗАПИСЬ</h4>
+        <div class="enter-popup__tabs">
+          <a id="mailFormEnterBtn" href="##" class="active">по e-mail </a>
+          <a id="smsFormEnterBtn" href="##">по SMS</a>
+        </div>
+        <div class="enter-popup__forms">
+          <div class="enter-popup__mail-form">
+            <form class="active" id="mailEnterForm">
+              <label>
+                <input type="email" name="email" placeholder="E-MAIL">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="ПАРОЛЬ">
+              </label>
+              <label>
+                <button type="submit">ВОЙТИ</button>
+              </label>
+            </form>
+            <form id="smsEnterForm">
+              <label>
+                <input type="tel" name="tel" placeholder="Телефон">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="Код SMS">
+              </label>
+              <label>
+                <button type="submit">ВОЙТИ</button>
+              </label>
+            </form>
+            <div class="enter-popup__bottom">
+              <div class="enter-popup__forget">
+                <p class="enter-popup__forget-text">Забыли пароль?</p>
+                <a href="##" class="enter-popup__forget-btn">ВОССТАНОВИТЬ</a>
+              </div>
+              <div class="enter-popup__registration">
+                <p class="enter-popup__registration-text">Еще нет <a href="##">АККАУНТА?</a></p>
+                <a href="##" class="enter-popup__registration-btn">РЕГИСТРАЦИЯ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="enter-popup__right">
+        <img src="images/popups/enter_img.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="registration-popup" id="registrationPopup">
+    <div class="registration-popup__content">
+      <div class="registration-popup__cross cross" id="registrationExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="registration-popup__left">
+        <h4 class="registration-popup__title">Регистрация</h4>
+        <div class="registration-popup__tabs">
+          <a id="mailFormRegistrationBtn" href="##" class="active">по e-mail </a>
+          <a id="smsFormRegistrationBtn" href="##">по SMS</a>
+        </div>
+        <div class="registration-popup__forms">
+          <div class="registration-popup__mail-form">
+            <form class="active" id="mailRegistrationForm">
+              <label>
+                <input type="email" name="email" placeholder="E-MAIL">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="ПАРОЛЬ">
+              </label>
+              <div class="registration-popup__choose-currency">
+                <p class="registration-popup__choose-currency__text">Выберете валюту:</p>
+                <div class="registration-popup__choose-currency__tabs">
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>USD</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency" checked>
+                    <span>AZN</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>RU</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>UAH</span>
+                  </label>
+                </div>
+              </div>
+              <label>
+                <button type="submit">РЕГИСТРАЦИЯ</button>
+              </label>
+              <p class="registration-popup__extra">Дополнительно</p>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox">
+                <span></span>
+                <p>Я достиг 18 и принимаю правила и <a href="##">Условия</a></p>
+              </label>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox" checked>
+                <span></span>
+                <p>Получать уведомления на E-mail и SMS</p>
+              </label>
+            </form>
+            <form id="smsRegistrationForm">
+              <label>
+                <input type="tel" name="tel" placeholder="Телефон">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="Код SMS">
+              </label>
+              <div class="registration-popup__choose-currency">
+                <p class="registration-popup__choose-currency__text">Выберете валюту:</p>
+                <div class="registration-popup__choose-currency__tabs">
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>USD</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>AZN</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>RU</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency" checked>
+                    <span>UAH</span>
+                  </label>
+                </div>
+              </div>
+              <label>
+                <button type="submit">РЕГИСТРАЦИЯ</button>
+              </label>
+              <p class="registration-popup__extra">Дополнительно</p>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox">
+                <span></span>
+                <p>Я достиг 18 и принимаю правила и <a href="##">Условия</a></p>
+              </label>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox" checked>
+                <span></span>
+                <p>Получать уведомления на E-mail и SMS</p>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="registration-popup__right">
+        <img src="images/popups/registration_img.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="text__content">
+    <h1 class="title">Terms of Service</h1>
+    <p>Accepting the Terms
+      These Terms of Service (“Terms”) are a legal agreement between Forliga, its Affiliates (“Forliga” or “we”) and you (“you”). Affiliates shall mean subsidiaries, parent companies, joint ventures and other corporate entities under common ownership. By using or accessing any Forliga game or application (“Service”) you agree to be bound by these Terms. Forliga’s is incorporated herein by reference. By accessing or using the Service, you agree that you have read, understood, and accept to be bound by the Terms. Forliga reserves the right, in its sole discretion, to modify or revise these Terms at any time, and you agree to be bound by such modifications or revisions. If you do not agree to the Terms, do not use the Service. Users are responsible for periodically viewing the Terms. Your continued use of the Service after a change or update has been made will constitute your acceptance to the revised Terms. If you do not agree to the Terms your only remedy is to discontinue your use of the Service and cancel any accounts you have made using the Service. If you violate the Terms, Forliga reserves the right to issue you a warning regarding the violation or immediately terminate or suspend any or all accounts you have created using the Service. You agree that Forliga need not provide you notice before terminating or suspending your account(s), but it may do so. Forliga reserves the right to refuse any user access to the Services without notice for any reason, including, but not limited to, a violation of the Terms. You agree that Forliga may discontinue the Service or change the content of the Service at any time, for any reason, with or without notice to you, without liability. You represent that you are 13 years old or older. If you are between the ages of 13 and 18, you represent that your legal guardian has reviewed and agrees to the Terms.</p>
+    <p>Intellectual Property/Ownership</p>
+    <p>All materials that are part of the Service (including, but not limited to, designs, text, graphics, pictures, video, information, applications, software, music, sound and other files, and their selection and arrangement) are protected by law from unauthorized use. The entire contents of the Service are copyrighted under the UK copyright laws and/or similar laws of other jurisdictions. You agree that no materials that are part of the Service may be modified, copied, distributed, framed, reproduced, republished, downloaded, scraped, displayed, posted, transmitted, or sold in any form or by any means, in whole or in part, or otherwise exploited without Forliga’s express prior written permission, except that the foregoing does not apply to your own User Content (as defined below) that you legally post on the Site. All other uses of copyrighted material, including any derivative use, require express prior written permission from Forliga. Any reproduction or redistribution of materials not in accordance with these Terms is expressly prohibited and may result in severe civil and criminal penalties. Some music is written by Kevin MacLeod (incompetech dot com) Licensed under Creative Commons: By Attribution 3.0 creativecommons dot org/licenses/by/3.0/ Forliga and/or its licensors remain the owners of right, title, and interest, including copyrights and other intellectual property rights, in and to all materials posted on the Services by Forliga. You acknowledge that you do not acquire any ownership rights by using the Service or by accessing any materials posted on the Service by Forliga, or any derivative works thereof. Forliga grants you a personal, non-exclusive, non-transferable, revocable, limited scope license to use the Service solely for the purpose of viewing and using the applicable Services and for no other purpose whatsoever. Your license to use the Services is limited by these Terms.</p>
+    <p>User Content</p>
+    <p>You agree that you are willingly publishing the content on the Service using technology and tools provided by Forliga. You understand and agree that you may not distribute, sell, transfer or license this content and/or application in any manner, in any country, or on any social network or other medium without the explicit written permission of Forliga. You grant Forliga the right to act as an agent on your behalf as operator of the application. Any data, text, graphics, photographs and their selection and arrangement, (hereinafter “User Content”) uploaded to the Service are subject, whether in whole or in part, to unlimited commercial, non-commercial and/or promotional use by Forliga. Text, graphics, and photographs are uploaded by you and are the sole responsibility of the person from whom the User Content originated. Thus, users are responsible, and Forliga is not responsible for any files users upload, post, or otherwise make available. Forliga may or may not regulate User Content and does not guarantee the accuracy, quality, or integrity of any User Content posted via the Forliga application. By using Forliga you acknowledge and accept that you may be exposed to material you find offensive or objectionable. You agree that Forliga will not under any circumstances be liable for any User Content, including, but not limited to, errors in any User Content, or any loss or damage incurred by use of the User Content. Forliga reserves the right to remove and permanently delete any User Content from the Service with or without notice. Virtual Currencies/Goods
+      The Service may include an opportunity to purchase virtual, in-game currency (“Virtual Currency”) that may require you to pay a fee using “real money” to obtain the Virtual Currency. The Service may also include virtual, in-game digital items (“Virtual Goods”) that may be purchased from Forliga for “real money” or for Virtual Currency. Virtual Currency and Virtual Goods can never be redeemed for real money, goods, or any other item of monetary value from Forliga or any other party. You understand that you have no right or title in Virtual Goods or Virtual Currency. Your purchase of Virtual Currency and/or Virtual Goods is final and is not refundable, exchangeable, transferable, except in Forliga’s sole discretion. You may not purchase, sell, or exchange Virtual Currency or Virtual Goods outside the Service. Doing so is a violation of the Terms and may result in termination of your account with the Service and/or legal action. Forliga retains the right to modify, manage, control and/or eliminate Virtual Currency and/or Virtual Goods at its sole discretion. Prices and availability of Virtual Goods are subject to change without notice. Rules of</p>
+    <p>Conduct/Usage</p>
+    <p>The Forliga Service may provide communication channels such as forums, communities, or chat areas (“Communication Channels”) designed to enable you to communicate with other Service users. Forliga has no obligation to monitor these communication channels but it may do so and reserves the right to review materials posted to the Communication Channels and to remove any materials, at any time, with or without notice for any reason, at its sole discretion. Forliga may also terminate or suspend your access to any Communication Channels at any time, without notice, for any reason. You acknowledge that chats, postings, or materials posted by users on the Communication Channels are neither endorsed nor controlled by Forliga, and these communications should not be considered reviewed or approved by Forliga. Forliga will not under any circumstance be liable for any activity within Communication Channels.
+      You agree that all your communications with the Communication Channels are public, and thus you have no expectation of privacy regarding your use of the Communication Channels. Forliga is not responsible for information that you choose to share on the Communication Channels, or for the actions of other users.
+      You agree that your use of the Service shall be lawful and that you will comply with the usage rules. In furtherance of the foregoing, and as an example and not as a limitation, you agree not to use the Service in order to:</p>
+    <p>post, upload, transmit or otherwise disseminate information that is obscene, indecent, vulgar, pornographic, sexual or otherwise objectionable defame, libel, ridicule, mock, stalk, threaten, harass, intimidate or abuse anyone, hatefully, racially, ethnically or, in a reasonable person’s view, otherwise offensive or objectionable upload or transmit (or attempt to upload or transmit) files that contain viruses, Trojan horses, worms, time bombs, cancelbots, corrupted files or data, or any other similar software or programs that may damage the operation of the Service or other users’ computers violate the contractual, personal, intellectual property or other rights of any party including using, uploading, transmitting, distributing, or otherwise making available any information made available through the Service in any manner that infringes any copyright, trademark, patent, trade secret, or other right of any party (including rights of privacy or publicity) attempt to obtain passwords or other private information from other members improperly use support channels or complaint buttons to make false reports to Forliga develop, distribute, or publicly inform other members of “auto” software programs, “macro” software programs or other “cheat utility” software program or applications in violation of the applicable License Agreements exploit, distribute or publicly inform other members of any game error, miscue or bug which gives an unintended advantage violate any applicable laws or regulations, or promote or encourage any illegal activity including, but not limited to, hacking, cracking or distribution of counterfeit software, or cheats or hacks for the Service Privacy and Protection of Personal Information</p>
+    <p>Information collected from you is subject to the pertinent social network’s policy. By using the Service, you may be granting your social network permission to share your e-mail address and any other personally identifiable information with Forliga. Please see Forliga’s Privacy Policy for more information on the collection and use of your information. You acknowledge and agree that the Privacy Policy is incorporated and made part of these Terms.
+      Disclaimer of Warranty; Limitation of Liability</p>
+    <p>You agree that your use of the Service shall be at your sole risk. To the fullest extent permitted by law, Forliga, its Affiliates, officers, directors, employees, and agents disclaim all warranties, express or implies, in connection with the website and your use thereof including implied warranties of title, merchantability, fitness for a particular purpose or non-infringement, accuracy, authority, completeness, usefulness, and timeliness. Forliga makes no warranties or representations about the accuracy or completeness of the content of the Service and of the content of any sites linked to the Service; Forliga assumes no liability or responsibility for any (i) errors, mistakes, or inaccuracies of content, (ii) personal injury or property damage, of any nature whatsoever, resulting from your access to and use of the Service, (iii) any unauthorized access to or use of our secure servers and/or any and all personal information and/or financial information stored therein, (iv) any interruption or cessation of transmission to or from the Service, (v) any bugs, viruses, trojan horses, or the like which may be transmitted to or through the Service by any third party, and/or (vi) any errors or omissions in any content or for any loss or damage of any kind incurred as a result of the use of any content posted, emailed, transmitted, or otherwise made available via the Service.</p>
+    <p>In no event will Forliga, its Affiliates, directors, officers, agents, contractors, partners and employees, be liable to you or any third person for any special, direct, indirect, incidental, special, punitive, or consequential damages whatsoever including any lost profits or lost data arising from your use of the Service or other materials on, accessed through or downloaded from the Service, whether based on warranty, contract, tort, or any other legal theory, and whether or not Forliga has been advised of the possibility of these damages. The foregoing limitation of liability shall apply to the fullest extent permitted by law in the applicable jurisdiction. You specifically acknowledge that Forliga shall not be liable for user submissions or the defamatory, offensive, or illegal conduct of any third party and that the risk of harm or damage from the foregoing rests entirely with you.</p>
+    <p>You agree to indemnify and hold Forliga, and each of its Affiliates, directors, officers, agents, contractors, partners and employees, harmless from and against any loss, liability, claim, demand, damages, costs and expenses, including reasonable attorney’s fees, arising out of or in connection with (i) your use of and access to the Service; (ii) your violation of any term of these Terms of Service; (iii) your violation of any third party right, including without limitation any copyright, property, or privacy right; (iv) any claim that one of your User Submissions caused damage to a third party; or (v) any Content you post or share on or through the Service.</p>
+    <p>General</p>
+    <p>By visiting or using the Service, you agree that the laws of United Kingdom, without regard to principles of conflict of laws and regardless of your location, will govern these Terms of Service and any dispute of any sort that might arise between you and Forliga. Any claim or dispute between you and Forliga that arises in whole or in part from your use of the Service shall be decided exclusively by a court of competent jurisdiction located in United Kingdom, and you hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non conveniens with respect to venue and jurisdiction in United Kingdom. Forliga reserves the right to amend these Terms of Service at any time and without notice, and it is your responsibility to review these Terms of Service for any changes. Your use of Forliga following any amendment of these Terms of Service will signify your assent to and acceptance of its revised terms. YOU AND Forliga AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR RELATED TO THE SERVICE MUST COMMENCE WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES. OTHERWISE, SUCH CAUSE OF ACTION IS PERMANENTLY BARRED.</p>
+  </div>
+</main>
+<footer>
+  <div class="footer__content">
+    <div class="footer__left">
+      <div class="footer__logo">
+        <img src="images/footer/logo_big.svg" alt="">
+      </div>
+      <p class="footer__text">Forliga платформа в мир, где возможности бесконечны! Мы предлагаем игрокам из разных уголков мира погрузиться в захватывающий мир игр и развлечений.</p>
+    </div>
+    <ul class="footer__right">
+      <li>
+        <a href="##">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="##">Terms of Service</a>
+      </li>
+      <li>
+        <a href="##">Development and support Logics7 LTD</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+</body>
+<script src="js/header.min.js"></script>
+</html>

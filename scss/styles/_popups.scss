@@ -228,8 +228,10 @@
           &.active {
             background: #ED0073;
           }
-          &:hover {
-            background: rgba(237, 0, 115, .7);
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              background: rgba(237, 0, 115, .7);
+            }
           }
         }
       }
@@ -377,8 +379,10 @@
          &.active {
            background: #ED0073;
          }
-         &:hover {
-           background: rgba(237, 0, 115, .7);
+         @media (hover: hover) and (pointer: fine) {
+           &:hover {
+             background: rgba(237, 0, 115, .7);
+           }
          }
        }
      }

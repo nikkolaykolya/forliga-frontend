@@ -15,7 +15,10 @@
             <a href="##" class="header__logo">
                 <img src="images/header/logo.svg" alt="Forliga logo">
             </a>
-            <div class="header__right">
+            <div id="burgerBtn" class="header__burger-btn">
+                <span class="header__burger-stripe"></span>
+            </div>
+            <div class="header__right" id="burgerMenu">
                 <div class="header__top">
                     <ul class="header__first-btns">
                         <li>
@@ -30,7 +33,7 @@
                             <a href="##">Онлайн игры</a>
                         </li>
                         <li>
-                            <a href="##">Онлайн казино</a>
+                            <a class="active" href="##">Онлайн казино</a>
                         </li>
                         <li>
                             <a href="##">Спортивные ставки</a>
@@ -44,28 +47,28 @@
                             <a id="enter" href="##">Вход</a>
                         </li>
                     </ul>
-                </div>
-                <div class="header__bottom">
-                    <ul>
-                        <li>
-                            <a href="##">
-                                <img src="images/header/coins.svg" alt="">
-                                <span>Бонусы</span>
-                            </a>
-                        </li>
-                        <li id="startBtn">
-                            <a href="##">
-                                <img src="images/header/question.svg" alt="">
-                                <span>С чего начать</span>
-                            </a>
-                        </li>
-                        <li id="contacts">
-                            <a href="##">
-                                <img src="images/header/book.svg" alt="">
-                                <span>Контакты</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="header__bottom">
+                        <ul>
+                            <li>
+                                <a href="##">
+                                    <img src="images/header/coins.svg" alt="">
+                                    <span>Бонусы</span>
+                                </a>
+                            </li>
+                            <li id="startBtn">
+                                <a href="##">
+                                    <img src="images/header/question.svg" alt="">
+                                    <span>С чего начать</span>
+                                </a>
+                            </li>
+                            <li id="contacts">
+                                <a href="##">
+                                    <img src="images/header/book.svg" alt="">
+                                    <span>Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -406,6 +409,11 @@
                             <img src="images/main/games/christmas_reach.jpg" loading="lazy" alt="">
                         </a>
                     </li>
+                    <li class="games__right__ad">
+                        <a href="##">
+                            <img src="images/main/banners/2.jpg" loading="lazy" alt="">
+                        </a>
+                    </li>
                     <li>
                         <a href="##">
                             <img src="images/main/games/rabbit_riches.jpg" loading="lazy" alt="">
@@ -419,6 +427,11 @@
                     <li>
                         <a href="##">
                             <img src="images/main/games/caishen_deluxe_maxways.jpg" loading="lazy" alt="">
+                        </a>
+                    </li>
+                    <li class="games__right__ad">
+                        <a href="##">
+                            <img src="images/main/banners/3.jpg" loading="lazy" alt="">
                         </a>
                     </li>
                     <li>
@@ -436,6 +449,11 @@
                             <img src="images/main/games/casino_holdem.jpg" loading="lazy" alt="">
                         </a>
                     </li>
+                    <li class="games__right__ad">
+                        <a href="##">
+                            <img src="images/main/banners/2.jpg" loading="lazy" alt="">
+                        </a>
+                    </li>
                     <li>
                         <a href="##">
                             <img src="images/main/games/save_the_hamster.jpg" loading="lazy" alt="">
@@ -449,6 +467,11 @@
                     <li>
                         <a href="##">
                             <img src="images/main/games/kungfu_dragon.jpg" loading="lazy" alt="">
+                        </a>
+                    </li>
+                    <li class="games__right__ad">
+                        <a href="##">
+                            <img src="images/main/banners/3.jpg" loading="lazy" alt="">
                         </a>
                     </li>
                     <li>
@@ -466,6 +489,11 @@
                             <img src="images/main/games/lucky_crumbling.jpg" loading="lazy" alt="">
                         </a>
                     </li>
+                    <li class="games__right__ad">
+                        <a href="##">
+                            <img src="images/main/banners/2.jpg" loading="lazy" alt="">
+                        </a>
+                    </li>
                     <li>
                         <a href="##">
                             <img src="images/main/games/hugon_quest.jpg" loading="lazy" alt="">
@@ -481,6 +509,11 @@
                             <img src="images/main/games/inner_fire.jpg" loading="lazy" alt="">
                         </a>
                     </li>
+                    <li class="games__right__ad">
+                        <a href="##">
+                            <img src="images/main/banners/3.jpg" loading="lazy" alt="">
+                        </a>
+                    </li>
                     <li>
                         <a href="##">
                             <img src="images/main/games/ruby_hood.jpg" loading="lazy" alt="">
@@ -494,6 +527,11 @@
                     <li>
                         <a href="##">
                             <img src="images/main/games/legacy_of_kong.jpg" loading="lazy" alt="">
+                        </a>
+                    </li>
+                    <li class="games__right__ad">
+                        <a href="##">
+                            <img src="images/main/banners/2.jpg" loading="lazy" alt="">
                         </a>
                     </li>
                     <li>
@@ -512,6 +550,19 @@
                         </a>
                     </li>
                 </ul>
+                <div class="games__pagination">
+                    <a href="##" class="games__pagination-back">
+                        <img src="images/main/games/chevron-left.svg" alt="">
+                    </a>
+                    <a href="##" class="active">1</a>
+                    <a href="##">2</a>
+                    <a href="##">3</a>
+                    <a href="##">...</a>
+                    <a href="##">4</a>
+                    <a href="##" class="games__pagination-forward">
+                        <img src="images/main/games/chevron-left.svg" alt="">
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -550,5 +601,6 @@
         });
     });
 </script>
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
+<script src="js/header.min.js"></script>
 </html>

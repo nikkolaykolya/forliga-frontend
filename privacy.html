@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/privacy_and_service.min.css">
+</head>
+<body>
+<header>
+  <div class="header__content">
+    <a href="##" class="header__logo">
+      <img src="images/header/logo.svg" alt="Forliga logo">
+    </a>
+    <div id="burgerBtn" class="header__burger-btn">
+      <span class="header__burger-stripe"></span>
+    </div>
+    <div class="header__right" id="burgerMenu">
+      <div class="header__top">
+        <ul class="header__first-btns">
+          <li>
+            <a href="##">Депозит</a>
+          </li>
+          <li>
+            <a href="##">Вывод денег</a>
+          </li>
+        </ul>
+        <ul class="header__tabs">
+          <li>
+            <a href="##">Онлайн игры</a>
+          </li>
+          <li>
+            <a class="active" href="##">Онлайн казино</a>
+          </li>
+          <li>
+            <a href="##">Спортивные ставки</a>
+          </li>
+        </ul>
+        <ul class="header__last-btns">
+          <li>
+            <a id="registration" href="##">Регистрация</a>
+          </li>
+          <li>
+            <a id="enter" href="##">Вход</a>
+          </li>
+        </ul>
+        <div class="header__bottom">
+          <ul>
+            <li>
+              <a href="##">
+                <img src="images/header/coins.svg" alt="">
+                <span>Бонусы</span>
+              </a>
+            </li>
+            <li id="startBtn">
+              <a href="##">
+                <img src="images/header/question.svg" alt="">
+                <span>С чего начать</span>
+              </a>
+            </li>
+            <li id="contacts">
+              <a href="##">
+                <img src="images/header/book.svg" alt="">
+                <span>Контакты</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="popups">
+  <div class="chat-form" id="chatForm">
+    <div class="chat-form__content">
+      <div class="chat-form__cross cross" id="chatExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="chat-form__left">
+        <h3 class="chat-form__title">Форма обратной связи</h3>
+        <p class="chat-form__text">Оставьте свой  вопрос и мы свяжемся с вами</p>
+        <form>
+          <label>
+            <input type="text" id="chatName" name="name" placeholder="Ваше имя">
+          </label>
+          <label>
+            <input type="tel" id="chatTel" name="phone" placeholder="телефон">
+          </label>
+          <label>
+            <input type="email" id="chatMail" name="email" placeholder="E-mail">
+          </label>
+          <label>
+            <textarea id="chatMessage" name="message" placeholder="Ваш вопрос"></textarea>
+          </label>
+          <label>
+            <button id="chatSubmit" type="submit">отправить</button>
+          </label>
+        </form>
+      </div>
+      <div class="chat-form__right">
+        <img src="images/popups/chat_img.jpg" loading="lazy" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="start-popup" id="startPopup">
+    <div class="start-popup__content">
+      <div class="start-popup__cross cross" id="startExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="start-popup__top">
+        <div class="start-popup__steps">
+          <h4 class="start-popup__title">С ЧЕГО НАЧАТЬ:</h4>
+          <p class="start-popup__subtitle">Начать играть очень просто. </p>
+          <ul>
+            <li>
+              <p>ШАГ 1:</p>
+              <span>Регистрация</span>
+            </li>
+            <li>
+              <p>ШАГ 2:</p>
+              <span>Пополнить счет</span>
+            </li>
+            <li>
+              <p>ШАГ 3:</p>
+              <span>Выигрывать!</span>
+            </li>
+          </ul>
+        </div>
+        <div class="start-popup__image">
+          <img src="images/popups/start.jpg" alt="">
+        </div>
+      </div>
+      <div class="start-popup__bottom">
+        <h5 class="start-popup__important">ВАЖНО:</h5>
+        <p class="start-popup__text">При создании аккаунта важно указывать достоверные данные во избежание казусов в будущем.
+          Все данные находятся в строгой конфиденциальности и ни в коем случае не будут переданы третьим лицам.
+          Выполнив эти простые требования Вы можете беспрепятственно играть в одном из самых лучших и популярных казино в интернете.</p>
+      </div>
+    </div>
+  </div>
+  <div class="enter-popup" id="enterPopup">
+    <div class="enter-popup__content">
+      <div class="enter-popup__cross cross" id="enterExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="enter-popup__left">
+        <h4 class="enter-popup__title">ВОЙТИ В УЧЕТНУЮ ЗАПИСЬ</h4>
+        <div class="enter-popup__tabs">
+          <a id="mailFormEnterBtn" href="##" class="active">по e-mail </a>
+          <a id="smsFormEnterBtn" href="##">по SMS</a>
+        </div>
+        <div class="enter-popup__forms">
+          <div class="enter-popup__mail-form">
+            <form class="active" id="mailEnterForm">
+              <label>
+                <input type="email" name="email" placeholder="E-MAIL">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="ПАРОЛЬ">
+              </label>
+              <label>
+                <button type="submit">ВОЙТИ</button>
+              </label>
+            </form>
+            <form id="smsEnterForm">
+              <label>
+                <input type="tel" name="tel" placeholder="Телефон">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="Код SMS">
+              </label>
+              <label>
+                <button type="submit">ВОЙТИ</button>
+              </label>
+            </form>
+            <div class="enter-popup__bottom">
+              <div class="enter-popup__forget">
+                <p class="enter-popup__forget-text">Забыли пароль?</p>
+                <a href="##" class="enter-popup__forget-btn">ВОССТАНОВИТЬ</a>
+              </div>
+              <div class="enter-popup__registration">
+                <p class="enter-popup__registration-text">Еще нет <a href="##">АККАУНТА?</a></p>
+                <a href="##" class="enter-popup__registration-btn">РЕГИСТРАЦИЯ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="enter-popup__right">
+        <img src="images/popups/enter_img.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="registration-popup" id="registrationPopup">
+    <div class="registration-popup__content">
+      <div class="registration-popup__cross cross" id="registrationExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="registration-popup__left">
+        <h4 class="registration-popup__title">Регистрация</h4>
+        <div class="registration-popup__tabs">
+          <a id="mailFormRegistrationBtn" href="##" class="active">по e-mail </a>
+          <a id="smsFormRegistrationBtn" href="##">по SMS</a>
+        </div>
+        <div class="registration-popup__forms">
+          <div class="registration-popup__mail-form">
+            <form class="active" id="mailRegistrationForm">
+              <label>
+                <input type="email" name="email" placeholder="E-MAIL">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="ПАРОЛЬ">
+              </label>
+              <div class="registration-popup__choose-currency">
+                <p class="registration-popup__choose-currency__text">Выберете валюту:</p>
+                <div class="registration-popup__choose-currency__tabs">
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>USD</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency" checked>
+                    <span>AZN</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>RU</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>UAH</span>
+                  </label>
+                </div>
+              </div>
+              <label>
+                <button type="submit">РЕГИСТРАЦИЯ</button>
+              </label>
+              <p class="registration-popup__extra">Дополнительно</p>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox">
+                <span></span>
+                <p>Я достиг 18 и принимаю правила и <a href="##">Условия</a></p>
+              </label>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox" checked>
+                <span></span>
+                <p>Получать уведомления на E-mail и SMS</p>
+              </label>
+            </form>
+            <form id="smsRegistrationForm">
+              <label>
+                <input type="tel" name="tel" placeholder="Телефон">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="Код SMS">
+              </label>
+              <div class="registration-popup__choose-currency">
+                <p class="registration-popup__choose-currency__text">Выберете валюту:</p>
+                <div class="registration-popup__choose-currency__tabs">
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>USD</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>AZN</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>RU</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency" checked>
+                    <span>UAH</span>
+                  </label>
+                </div>
+              </div>
+              <label>
+                <button type="submit">РЕГИСТРАЦИЯ</button>
+              </label>
+              <p class="registration-popup__extra">Дополнительно</p>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox">
+                <span></span>
+                <p>Я достиг 18 и принимаю правила и <a href="##">Условия</a></p>
+              </label>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox" checked>
+                <span></span>
+                <p>Получать уведомления на E-mail и SMS</p>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="registration-popup__right">
+        <img src="images/popups/registration_img.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="text__content">
+    <h1 class="title">Privacy Policy</h1>
+    <p>Forliga and its Affiliates (“forliga” or “we”) are dedicated to protecting the privacy rights of our online users (“users” or “you”). Affiliates shall mean subsidiaries, parent companies, joint ventures and other corporate entities under common ownership. This Online Privacy Policy (“Privacy Policy”) has been crafted to inform you as to the ways we collect, store, use, manage, and, in certain circumstances, share the information you provide in connection with any forliga game or application (“Service”). Please note that the scope of this Privacy Policy is limited to only information collected from forliga through use of the Service.
+      By using the Service, you agree to the collection and use of your personal information as outlined in this Privacy Policy. We may amend the Privacy Policy from time to time, and we encourage you to consult the Privacy Policy regularly for changes.</p>
+    <p>Information Collected and Used</p>
+    <p>forliga’s primary objective in collecting user information is to provide and enhance the Service and to enable users to easily navigate and enjoy the Service.
+      When you install any of the forliga games or applications, we may collect and record the information you provide us voluntarily through www.facebook.com (“Facebook”) and/or other social network(s) and mobile platforms in accordance with the policies and terms of Facebook and/or other social network(s) and mobile platforms e.g. iTunes, Google Play, Amazon etc.</p>
+    <p>The types of personal information collected in accordance with the activities listed above may vary depending on the activity. This “personal information” is defined as information about you that can be used to contact or identify you. Personal information may include: (1) your first and last name, (2) your profile picture or its URL, (3) your user identification number of the pertinent social network, which is linked to publicly available information such as name and profile picture (4) the login email you provided to the pertinent social network upon registration. Additionally, we may acquire information from you through (1) your access and participation in message boards on the Service (2) your email of a question to our customer support (3) your purchase of a virtual product of any type (4) other sources, including but not limited to newspapers and internet sources such as blogs, instant messaging services, other users of the Service to supplement your profile. Please note that because a third party site manages the purchases of virtual goods offered by the Service, we do not have access to your credit card details and billing information.
+      forliga may also invite you to share non-personal information about yourself which may include but is not limited to: (1) your age or date of birth; (2) your gender; (3) information about the hardware you may own; (4) your favorite websites, friend information (such as friends of yours that are also connected to our Service) and fan pages; (5) your physical location and that of your access device (collectively referred to as “non-personal information”). If non-personal information is collected for an activity that also requires personal information, forliga may combine your non-personal information with your personal information in an attempt to provide you with a better user experience, to improve the quality and value of the Services and to analyze how our Service is used.
+      The Service will also record game play information such as your high scores or game session duration.</p>
+    <p> In addition to information collected as described above, you may choose to share additional information about yourself throughout the Service, such as in games or on message boards. Any actions you perform with other players are considered public, and are at your sole discretion.
+      We may use your name, profile picture, email address and other information to notify you of new product releases, service notifications, and to solicit your feedback and input. Those emails will contain links for preference management and where appropriate, unsubscribe links should you decide you do not want to receive further emails.</p>
+    <p>Forliga and its Affiliates (“forliga” or “we”) are dedicated to protecting the privacy rights of our online users (“users” or “you”). Affiliates shall mean subsidiaries, parent companies, joint ventures and other corporate entities under common ownership. This Online Privacy Policy (“Privacy Policy”) has been crafted to inform you as to the ways we collect, store, use, manage, and, in certain circumstances, share the information you provide in connection with any forliga game or application (“Service”). Please note that the scope of this Privacy Policy is limited to only information collected from forliga through use of the Service.
+      By using the Service, you agree to the collection and use of your personal information as outlined in this Privacy Policy. We may amend the Privacy Policy from time to time, and we encourage you to consult the Privacy Policy regularly for changes.</p>
+    <p>Finally, any time you access the Service, we may collect aggregate information including but not limited to internet protocol addresses, browser type, browser language, referring / exit pages and URLs, platform type, number of clicks, domain names, landing pages, pages viewed and the order of those pages, the amount of time spent on particular pages, and the date and time of this activity (“aggregate information”). We use this aggregate information to better tailor the Service to your interests, to provide you more efficient customer support, and to overall enhance the Service.
+      We may use your name, profile picture and game play information to communicate with your friends that are also connected to the Service, which you can opt out of at the bottom of this webpage. We may also disclose information about you to our partners, such as our publisher Six Waves Inc., in order to provide the Service, resolve service problems and correct errors in the Service, to communicate with you about the Service, to provide you with advertising and promotional information in connection with the Service, and to enhance your experience on the Service. However, we do not give our partners an independent right to share this information. Due to our contractual obligations with these third parties and the need to share information to deliver and support the Service, we cannot provide you with the opportunity to opt-out of sharing information (whether personal information or non-personal information) with these third parties. forliga, certain of its partners, and each of their contractors and employees may view the information that you transmit to the Service to provide the Service and otherwise perform the tasks set forth in this Privacy Policy.</p>
+    <p>In all cases of data access and collection, the information you provide will not be disclosed, rented, leased, loaned, sold, or otherwise voluntarily distributed to unaffiliated third parties and will be used solely for the purpose of providing you with and improving the Service.
+      Other Disclosure of Your Personal Information
+      You understand and agree that we may be required to disclose any personal information if required to do so by law or in good faith believe that such disclosure is reasonably necessary to avoid liability, to comply with legal process, including but not limited to a search warrant, subpoena, statute, or court order, or to protect our rights and property, or that of the public. Note that forliga is not required to question or contest the validity of any search warrant, subpoena or other similar governmental request that forliga may receive.
+      Additionally, in the event of a merger, acquisition, reorganization, bankruptcy, or other similar event, customer information may be transferred to forliga’s successor or assignee, if permitted by and done in accordance with applicable law.
+      Others’ Information
+      You may decide to provide us with another person’s personal information such as email address so that the person may be invited to join the Service. We use this information to contact and, if necessary, remind that person that he or she has been invited to join the Service or receive content from the Service. We may disclose such information if required to do so in order to comply with legal process, as described above.</p>
+    <p>Cookies</p>
+    <p>A cookie is a small data file that we transfer to your computer’s hard disk, generally to quickly identify a user’s computer and to “remember” things about the user’s visit, such as your preferences or a user name and password. The Service sends cookies to your computer when you access or view content of a forliga game. Information contained in a cookie may be linked to your personal information for purposes such as improving the quality of our service, tailoring recommendations to your interests, and making the Service easier to use. You can disable cookies at any time, although you may not be able to access or use features of the Service.</p>
+    <p>Links</p>
+    <p>The Service may contain links to other websites. The fact that the Service links to a website or presents a banner ad or other type of advertisement does not mean that forliga endorses or authorizes that third party, nor is it a representation of our affiliation with that third party. forliga is in no way responsible for the privacy policies of these other websites to which you chose to access from the Service. Please be sure to read the privacy policies of those websites when exiting the Service.</p>
+    <p>Third-Party Advertising Companies</p>
+    <p>We may use third-party advertising companies to serve ads on the Service. We do not provide any personal information to third-party advertising companies on a non-aggregate basis. Our system and the third-party advertising technology may use aggregate information, non-personal information, forliga ’s cookies on your hard drive and your use of the Service to target advertisements. In addition, advertisers may use other third-party advertising technology to target advertising on other sites. If advertisements are served to you, a unique third-party cookie or cookies may be placed on your computer. Similarly, third-party advertising companies may provide us with pixel tags (also called “clear gifs” or “beacons”) to help manage and optimize online advertising. Beacons enable us to recognize a browser’s cookie when a browser visits the site on which is beacon is located, and to learn which banner ads bring users to a given site.</p>
+    <p>Changing or Deleting Your Information
+      You may review, update, correct or delete any personal information by changing the applicable information in your profile page on Facebook and/or other social network(s). If you completely delete all this information, your account may become deactivated. If you would like us to delete your record in our system, please contact us and we will attempt to accommodate your request if we are not legally obligated to retain the record.</p>
+    <p>Security</p>
+    <p>We have put in place reasonable technical and organizational measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration or disclosure. However, we cannot guarantee that unauthorized third parties will never be able to overcome those measures or use your personal information for improper purposes. Also please note that email and messaging systems are not considered secure, so we discourage you from sending us personal information through these mediums.
+      Policy Regarding Children
+      The Service is not geared toward children under the age of 13 and we do not knowingly collect personal information from children under the age of 13. If we learn that a child under 13 has provided us with personal information we will delete such information from our files as quickly as possible.</p>
+    <p>Contacting Us</p>
+    <p>If you have any questions about this Privacy Policy, please contact us.</p>
+  </div>
+</main>
+<footer>
+  <div class="footer__content">
+    <div class="footer__left">
+      <div class="footer__logo">
+        <img src="images/footer/logo_big.svg" alt="">
+      </div>
+      <p class="footer__text">Forliga платформа в мир, где возможности бесконечны! Мы предлагаем игрокам из разных уголков мира погрузиться в захватывающий мир игр и развлечений.</p>
+    </div>
+    <ul class="footer__right">
+      <li>
+        <a href="##">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="##">Terms of Service</a>
+      </li>
+      <li>
+        <a href="##">Development and support Logics7 LTD</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+</body>
+<script src="js/header.min.js"></script>
+</html>

@@ -29,8 +29,10 @@ $anim: 0.3s ease;
     text-align: center;
     display: block;
   }
-  &:hover {
-    background: #ED0073;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: #ED0073;
+    }
   }
 }
 
@@ -50,4 +52,7 @@ body {
 
 main {
   margin-top: 121px;
+  @media (max-width: 1000px) {
+    margin-top: 78px;
+  }
 }
