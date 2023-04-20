@@ -399,6 +399,193 @@
   }
 }
 
+.history {
+  padding-top: 26px;
+  .history__content {
+    .history__tabs {
+      @include default-width;
+      display: flex;
+      gap: 25px;
+      @media (max-width: 750px) {
+        gap: 20px;
+      }
+      li {
+        display: block;
+        @media (max-width: 750px) {
+          flex-basis: 0;
+          flex-grow: 1;
+        }
+        a {
+          display: block;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          padding: 10px 0;
+          width: 214px;
+          color: white;
+          border: 1.5px solid #005DDB;
+          text-align: center;
+          transition: all $anim;
+          @media (max-width: 750px) {
+            width: 100%;
+          }
+          &.active {
+            background: #005DDB;
+          }
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              background: #005DDB;
+            }
+          }
+        }
+      }
+    }
+    .history__tables {
+      @include default-width;
+      overflow: auto;
+      margin-top: 67px;
+      padding-bottom: 15px!important;
+      >div {
+        display: none;
+        &.active {
+          display: block;
+        }
+        ul {
+          display: flex;
+          gap: 10px;
+          li {
+            flex-shrink: 0;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: white;
+            padding: 10px 0;
+            border: 1.5px solid #ED0073;
+            text-align: center;
+          }
+        }
+        .history__table-head {
+          li {
+            background: #ED0073;
+          }
+        }
+        .history__table-row {
+          margin-top: 10px;
+        }
+      }
+      .history__transactions-table {
+        ul {
+          li {
+            &:nth-child(1) {
+              width: 65px;
+            }
+            &:nth-child(2) {
+              width: 91px;
+            }
+            &:nth-child(3) {
+              width: 172px;
+            }
+            &:nth-child(4) {
+              width: 143px;
+            }
+            &:nth-child(5) {
+              width: 176px;
+            }
+            &:nth-child(6) {
+              width: 290px;
+            }
+            &:nth-child(7) {
+              width: 172px;
+            }
+          }
+        }
+      }
+      .history__games-table {
+        ul {
+          li {
+            &:nth-child(1) {
+              width: 65px;
+            }
+            &:nth-child(2) {
+              width: 110px;
+            }
+            &:nth-child(3) {
+              width: 327px;
+            }
+            &:nth-child(4) {
+              width: 212px;
+            }
+            &:nth-child(5) {
+              width: 203px;
+            }
+            &:nth-child(6) {
+              width: 203px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.message {
+  padding-top: 60px;
+  padding-bottom: 300px;
+  @media (max-width: 750px) {
+    padding-bottom: 0;
+    padding-top: 67px;
+  }
+  .message__content {
+    .message__tables {
+      @include default-width;
+      overflow: auto;
+      padding-bottom: 15px!important;
+      >div {
+        ul {
+          display: flex;
+          gap: 10px;
+          li {
+            flex-shrink: 0;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: white;
+            padding: 10px 0;
+            border: 1.5px solid #ED0073;
+            text-align: center;
+          }
+        }
+        .message__table-head {
+          li {
+            background: #ED0073;
+          }
+        }
+        .message__table-row {
+          margin-top: 10px;
+        }
+      }
+      .message__table {
+        ul {
+          li {
+            &:nth-child(1) {
+              width: 65px;
+            }
+            &:nth-child(2) {
+              width: 154px;
+            }
+            &:nth-child(3) {
+              width: 251px;
+            }
+            &:nth-child(4) {
+              width: 670px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1100px) {
   .profile {

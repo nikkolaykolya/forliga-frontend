@@ -4,6 +4,7 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/js/balance.min.js" />
         <item url="file://$PROJECT_DIR$/js/header.min.js" />
+        <item url="file://$PROJECT_DIR$/js/history.min.js" />
         <item url="file://$PROJECT_DIR$/js/lib/jquery.min.min.js" />
         <item url="file://$PROJECT_DIR$/js/lib/owl.carousel.min.min.js" />
         <item url="file://$PROJECT_DIR$/js/main.min.js" />
@@ -13,6 +14,7 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/js/balance.min.js" />
       <root url="file://$PROJECT_DIR$/js/header.min.js" />
+      <root url="file://$PROJECT_DIR$/js/history.min.js" />
       <root url="file://$PROJECT_DIR$/js/lib/jquery.min.min.js" />
       <root url="file://$PROJECT_DIR$/js/lib/owl.carousel.min.min.js" />
       <root url="file://$PROJECT_DIR$/js/main.min.js" />
