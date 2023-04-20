@@ -7,37 +7,7 @@
 $anim: 0.3s ease;
 
 
-@mixin default-width {
-  width: 81%;
-  max-width: 1170px;
-  margin: 0 auto;
-  @media (max-width: 750px) {
-    width: 100%;
-    padding: 0 20px;
-  }
-}
-
-@mixin default-btn {
-  border: 1.5px solid #ED0073;
-  transition: all $anim;
-  a {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    display: block;
-  }
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      background: #ED0073;
-    }
-  }
-}
-
-
-
+@import "mixins";
 @import "fonts";
 @import "reset";
 @import "header";

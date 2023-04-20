@@ -6,8 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/lib/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/profile.min.css">
 </head>
 <body>
 <header>
@@ -15,8 +14,16 @@
         <a href="##" class="header__logo">
             <img src="images/header/logo.svg" alt="Forliga logo">
         </a>
-        <div id="burgerBtn" class="header__burger-btn">
-            <span class="header__burger-stripe"></span>
+        <div class="header__mob-left">
+            <a href="##" class="header__balance-mob">
+                <div class="header__balance-icon">
+                    <img src="images/header/dollar.svg" alt="">
+                </div>
+                <p class="header__balance-value">0.00</p>
+            </a>
+            <div id="burgerBtn" class="header__burger-btn">
+                <span class="header__burger-stripe"></span>
+            </div>
         </div>
         <div class="header__right" id="burgerMenu">
             <div class="header__top">
@@ -39,12 +46,15 @@
                         <a href="##">Спортивные ставки</a>
                     </li>
                 </ul>
+                <a href="##" class="header__balance">
+                    <div class="header__balance-icon">
+                        <img src="images/header/dollar.svg" alt="">
+                    </div>
+                    <p class="header__balance-value">0.00</p>
+                </a>
                 <ul class="header__last-btns">
                     <li>
-                        <a id="registration" href="##">Регистрация</a>
-                    </li>
-                    <li>
-                        <a id="enter" href="##">Вход</a>
+                        <a id="enter" href="##">Выход</a>
                     </li>
                 </ul>
                 <div class="header__bottom">
@@ -303,7 +313,121 @@
     </div>
 </div>
 <main>
-    
+    <section class="tabs">
+        <ul>
+            <li class="active">
+                <a href="##">ПРОФАЙЛ</a>
+            </li>
+            <li>
+                <a href="##">БАЛАНС</a>
+            </li>
+            <li>
+                <a href="##">ИСТОРИЯ</a>
+            </li>
+            <li>
+                <a href="##">СООБЩЕНИЯ</a>
+            </li>
+        </ul>
+    </section>
+    <section class="profile">
+        <div class="profile__content">
+            <form class="profile__info">
+                <div class="profile__info-forms">
+                    <div class="profile__left-form">
+                        <h3 class="profile__form-title">ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ</h3>
+                        <label>
+                            <input type="text" name="name" placeholder="имя">
+                        </label>
+                        <label>
+                            <input type="text" name="surname" placeholder="Фамилия">
+                        </label>
+                        <label>
+                            <input type="text" name="login" placeholder="Псевдоним">
+                        </label>
+                        <label>
+                            <input type="tel" name="phone" placeholder="телефон">
+                        </label>
+                        <div class="profile__gender">
+                            <p class="profile__gender-title">Пол</p>
+                            <div class="profile__gender-options">
+                                <label>
+                                    <input type="radio" name="gender">
+                                    <span>Мужчина</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender">
+                                    <span>Женщина</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="profile__birth">
+                            <p class="profile__birth-title">Дата Рождения</p>
+                            <div class="profile__birth-inputs">
+                                <label>
+                                    <input type="text" name="day" placeholder="День">
+                                </label>
+                                <label>
+                                    <input type="text" name="month" placeholder="месяц">
+                                </label>
+                                <label>
+                                    <input type="text" name="year" placeholder="Год">
+                                </label>
+                            </div>
+                        </div>
+                        <label>
+                            <input type="text" name="city" placeholder="Город">
+                        </label>
+                        <label>
+                            <input type="text" name="country" placeholder="Страна">
+                        </label>
+                    </div>
+                    <div class="profile__right-form">
+                        <h3 class="profile__form-title">ПЛАТЕЖНАЯ ИНФОРМАЦИЯ</h3>
+                        <label class="profile__payment-select" id="paymentMethodLabel">
+                            <input id="paymentMethodInput" type="text" name="payment" placeholder="Выберите платежную систему" readonly>
+                            <ul id="paymentDrop">
+                                <li class="profile__payment-options">Visa</li>
+                                <li class="profile__payment-options">mastercard</li>
+                                <li class="profile__payment-options">american express</li>
+                            </ul>
+                        </label>
+                        <h4 class="profile__avatar-title">АВАТАР</h4>
+                        <label class="profile__load">
+                            <input type="file">
+                            <p class="profile__load-text">Загрузить аватар</p>
+                            <div class="profile__image">
+                                <img src="images/profile/avatar.png" alt="">
+                            </div>
+                        </label>
+                        <p class="profile__notification-title">ОПОВЕЩЕНИЯ</p>
+                        <label class="profile__notification">
+                            <input type="checkbox">
+                            <span></span>
+                            <p>Хочу получать оповещения по почте</p>
+                        </label>
+                    </div>
+                </div>
+                <label>
+                    <input type="submit" value="Сохранить">
+                </label>
+            </form>
+            <form class="profile__password-form">
+                <h3 class="profile__form-title">ИЗМЕНЕНИЕ ПАРОЛЯ</h3>
+                <label>
+                    <input type="password" name="oldPassword" placeholder="Старый пароль">
+                </label>
+                <label>
+                    <input type="password" name="newPassword" placeholder="Новый пароль">
+                </label>
+                <label>
+                    <input type="password" name="newPasswordRepeat" placeholder="повторите новый пароль">
+                </label>
+                <label>
+                    <input type="submit" value="Сохранить">
+                </label>
+            </form>
+        </div>
+    </section>
 </main>
 <footer>
     <div class="footer__content">
@@ -329,4 +453,5 @@
 </body>
 <script src="js/main.min.js"></script>
 <script src="js/header.min.js"></script>
+<script src="js/profile.min.js"></script>
 </html>

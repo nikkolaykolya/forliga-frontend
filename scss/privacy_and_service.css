@@ -88,6 +88,9 @@ header .header__content .header__logo {
   display: block;
   margin-right: 13px;
 }
+header .header__content .header__balance-mob {
+  display: none;
+}
 header .header__content .header__burger-btn {
   display: none;
 }
@@ -120,6 +123,9 @@ header .header__content .header__right .header__top .header__first-btns li a {
   header .header__content .header__right .header__top .header__first-btns li:hover {
     background: #ED0073;
   }
+}
+header .header__content .header__right .header__top .header__first-btns li.active {
+  background: #ED0073;
 }
 header .header__content .header__right .header__top .header__first-btns li a {
   width: 131px;
@@ -240,6 +246,16 @@ header .header__content .header__right .header__bottom ul li a span {
     font-size: 12px;
     line-height: 14px;
   }
+  header .header__content .header__right .header__top .header__balance {
+    display: none;
+    align-items: center;
+    gap: 15px;
+  }
+  header .header__content .header__right .header__top .header__balance .header__balance-value {
+    font-size: 25px;
+    line-height: 29px;
+    color: white;
+  }
   header .header__content .header__right .header__top .header__last-btns {
     order: 2;
   }
@@ -276,14 +292,33 @@ header .header__content .header__right .header__bottom ul li a span {
     width: 100%;
     height: 100%;
   }
-  header .header__content .header__burger-btn {
+  header .header__content .header__mob-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  header .header__content .header__mob-left .header__balance-mob {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  header .header__content .header__mob-left .header__balance-mob img {
+    width: 26px;
+    height: 26px;
+  }
+  header .header__content .header__mob-left .header__balance-mob .header__balance-value {
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
+  }
+  header .header__content .header__mob-left .header__burger-btn {
     display: block;
     cursor: pointer;
     position: relative;
     height: 14px;
     width: 20px;
   }
-  header .header__content .header__burger-btn:before {
+  header .header__content .header__mob-left .header__burger-btn:before {
     content: "";
     position: absolute;
     top: 0;
@@ -293,7 +328,7 @@ header .header__content .header__right .header__bottom ul li a span {
     background: white;
     transition: all 0.3s ease;
   }
-  header .header__content .header__burger-btn:after {
+  header .header__content .header__mob-left .header__burger-btn:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -303,7 +338,7 @@ header .header__content .header__right .header__bottom ul li a span {
     background: white;
     transition: all 0.3s ease;
   }
-  header .header__content .header__burger-btn .header__burger-stripe {
+  header .header__content .header__mob-left .header__burger-btn .header__burger-stripe {
     position: absolute;
     top: 6px;
     left: 0;
@@ -313,14 +348,14 @@ header .header__content .header__right .header__bottom ul li a span {
     transition: all 0.3s ease;
     opacity: 1;
   }
-  header .header__content .header__burger-btn.cross .header__burger-stripe {
+  header .header__content .header__mob-left .header__burger-btn.cross .header__burger-stripe {
     opacity: 0;
   }
-  header .header__content .header__burger-btn.cross:before {
+  header .header__content .header__mob-left .header__burger-btn.cross:before {
     transform: rotate(45deg);
     top: 6px;
   }
-  header .header__content .header__burger-btn.cross:after {
+  header .header__content .header__mob-left .header__burger-btn.cross:after {
     transform: rotate(-45deg);
     bottom: 6px;
   }
@@ -392,6 +427,11 @@ header .header__content .header__right .header__bottom ul li a span {
     font-size: 18px;
     line-height: 21px;
     padding-bottom: 5px;
+  }
+}
+@media (max-width: 1000px) {
+  header .header__content .header__right .header__top .header__balance {
+    display: none;
   }
 }
 @media (max-width: 1000px) {
@@ -1226,6 +1266,15 @@ footer .footer__content .footer__right li a {
   height: 6px;
   background: #ed0073;
 }
+@media (max-width: 750px) {
+  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label {
+    display: flex;
+    align-items: flex-start;
+  }
+  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label span {
+    flex-shrink: 0;
+  }
+}
 .registration-popup .registration-popup__content .registration-popup__right {
   padding-right: 20px;
   padding-top: 11px;
@@ -1359,44 +1408,6 @@ footer .footer__content .footer__right li a {
     line-height: 18px;
     color: #ED0073;
     padding: 20px 0;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label:last-child {
-    margin-top: 15px;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label input[type=checkbox] {
-    display: none;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label span {
-    display: block;
-    width: 14px;
-    height: 14px;
-    border: 2px solid #ed0073;
-    position: relative;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label p {
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-    padding-left: 15px;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label p a {
-    color: white;
-    text-decoration: underline !important;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label > input[type=checkbox]:checked + span:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 6px;
-    height: 6px;
-    background: #ed0073;
   }
 }
 @media (max-width: 1100px) {
@@ -1561,13 +1572,6 @@ footer .footer__content .footer__right li a {
   }
   .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__extra {
     padding: 24px 0 18px;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label {
-    display: flex;
-    align-items: flex-start;
-  }
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label span {
-    flex-shrink: 0;
   }
 }
 body {

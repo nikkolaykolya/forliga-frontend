@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/profile.min.css">
+</head>
+<body>
+<header>
+  <div class="header__content">
+    <a href="##" class="header__logo">
+      <img src="images/header/logo.svg" alt="Forliga logo">
+    </a>
+    <div class="header__mob-left">
+      <a href="##" class="header__balance-mob">
+        <div class="header__balance-icon">
+          <img src="images/header/dollar.svg" alt="">
+        </div>
+        <p class="header__balance-value">0.00</p>
+      </a>
+      <div id="burgerBtn" class="header__burger-btn">
+        <span class="header__burger-stripe"></span>
+      </div>
+    </div>
+    <div class="header__right" id="burgerMenu">
+      <div class="header__top">
+        <ul class="header__first-btns">
+          <li>
+            <a href="##">Депозит</a>
+          </li>
+          <li>
+            <a href="##">Вывод денег</a>
+          </li>
+        </ul>
+        <ul class="header__tabs">
+          <li>
+            <a href="##">Онлайн игры</a>
+          </li>
+          <li>
+            <a class="active" href="##">Онлайн казино</a>
+          </li>
+          <li>
+            <a href="##">Спортивные ставки</a>
+          </li>
+        </ul>
+        <a href="##" class="header__balance">
+          <div class="header__balance-icon">
+            <img src="images/header/dollar.svg" alt="">
+          </div>
+          <p class="header__balance-value">0.00</p>
+        </a>
+        <ul class="header__last-btns">
+          <li>
+            <a id="enter" href="##">Выход</a>
+          </li>
+        </ul>
+        <div class="header__bottom">
+          <ul>
+            <li>
+              <a href="##">
+                <img src="images/header/coins.svg" alt="">
+                <span>Бонусы</span>
+              </a>
+            </li>
+            <li id="startBtn">
+              <a href="##">
+                <img src="images/header/question.svg" alt="">
+                <span>С чего начать</span>
+              </a>
+            </li>
+            <li id="contacts">
+              <a href="##">
+                <img src="images/header/book.svg" alt="">
+                <span>Контакты</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="popups">
+  <div class="chat-form" id="chatForm">
+    <div class="chat-form__content">
+      <div class="chat-form__cross cross" id="chatExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="chat-form__left">
+        <h3 class="chat-form__title">Форма обратной связи</h3>
+        <p class="chat-form__text">Оставьте свой  вопрос и мы свяжемся с вами</p>
+        <form>
+          <label>
+            <input type="text" id="chatName" name="name" placeholder="Ваше имя">
+          </label>
+          <label>
+            <input type="tel" id="chatTel" name="phone" placeholder="телефон">
+          </label>
+          <label>
+            <input type="email" id="chatMail" name="email" placeholder="E-mail">
+          </label>
+          <label>
+            <textarea id="chatMessage" name="message" placeholder="Ваш вопрос"></textarea>
+          </label>
+          <label>
+            <button id="chatSubmit" type="submit">отправить</button>
+          </label>
+        </form>
+      </div>
+      <div class="chat-form__right">
+        <img src="images/popups/chat_img.jpg" loading="lazy" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="start-popup" id="startPopup">
+    <div class="start-popup__content">
+      <div class="start-popup__cross cross" id="startExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="start-popup__top">
+        <div class="start-popup__steps">
+          <h4 class="start-popup__title">С ЧЕГО НАЧАТЬ:</h4>
+          <p class="start-popup__subtitle">Начать играть очень просто. </p>
+          <ul>
+            <li>
+              <p>ШАГ 1:</p>
+              <span>Регистрация</span>
+            </li>
+            <li>
+              <p>ШАГ 2:</p>
+              <span>Пополнить счет</span>
+            </li>
+            <li>
+              <p>ШАГ 3:</p>
+              <span>Выигрывать!</span>
+            </li>
+          </ul>
+        </div>
+        <div class="start-popup__image">
+          <img src="images/popups/start.jpg" alt="">
+        </div>
+      </div>
+      <div class="start-popup__bottom">
+        <h5 class="start-popup__important">ВАЖНО:</h5>
+        <p class="start-popup__text">При создании аккаунта важно указывать достоверные данные во избежание казусов в будущем.
+          Все данные находятся в строгой конфиденциальности и ни в коем случае не будут переданы третьим лицам.
+          Выполнив эти простые требования Вы можете беспрепятственно играть в одном из самых лучших и популярных казино в интернете.</p>
+      </div>
+    </div>
+  </div>
+  <div class="enter-popup" id="enterPopup">
+    <div class="enter-popup__content">
+      <div class="enter-popup__cross cross" id="enterExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="enter-popup__left">
+        <h4 class="enter-popup__title">ВОЙТИ В УЧЕТНУЮ ЗАПИСЬ</h4>
+        <div class="enter-popup__tabs">
+          <a id="mailFormEnterBtn" href="##" class="active">по e-mail </a>
+          <a id="smsFormEnterBtn" href="##">по SMS</a>
+        </div>
+        <div class="enter-popup__forms">
+          <div class="enter-popup__mail-form">
+            <form class="active" id="mailEnterForm">
+              <label>
+                <input type="email" name="email" placeholder="E-MAIL">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="ПАРОЛЬ">
+              </label>
+              <label>
+                <button type="submit">ВОЙТИ</button>
+              </label>
+            </form>
+            <form id="smsEnterForm">
+              <label>
+                <input type="tel" name="tel" placeholder="Телефон">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="Код SMS">
+              </label>
+              <label>
+                <button type="submit">ВОЙТИ</button>
+              </label>
+            </form>
+            <div class="enter-popup__bottom">
+              <div class="enter-popup__forget">
+                <p class="enter-popup__forget-text">Забыли пароль?</p>
+                <a href="##" class="enter-popup__forget-btn">ВОССТАНОВИТЬ</a>
+              </div>
+              <div class="enter-popup__registration">
+                <p class="enter-popup__registration-text">Еще нет <a href="##">АККАУНТА?</a></p>
+                <a href="##" class="enter-popup__registration-btn">РЕГИСТРАЦИЯ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="enter-popup__right">
+        <img src="images/popups/enter_img.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="registration-popup" id="registrationPopup">
+    <div class="registration-popup__content">
+      <div class="registration-popup__cross cross" id="registrationExit">
+        <img src="images/popups/close.svg" alt="">
+      </div>
+      <div class="registration-popup__left">
+        <h4 class="registration-popup__title">Регистрация</h4>
+        <div class="registration-popup__tabs">
+          <a id="mailFormRegistrationBtn" href="##" class="active">по e-mail </a>
+          <a id="smsFormRegistrationBtn" href="##">по SMS</a>
+        </div>
+        <div class="registration-popup__forms">
+          <div class="registration-popup__mail-form">
+            <form class="active" id="mailRegistrationForm">
+              <label>
+                <input type="email" name="email" placeholder="E-MAIL">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="ПАРОЛЬ">
+              </label>
+              <div class="registration-popup__choose-currency">
+                <p class="registration-popup__choose-currency__text">Выберете валюту:</p>
+                <div class="registration-popup__choose-currency__tabs">
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>USD</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency" checked>
+                    <span>AZN</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>RU</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>UAH</span>
+                  </label>
+                </div>
+              </div>
+              <label>
+                <button type="submit">РЕГИСТРАЦИЯ</button>
+              </label>
+              <p class="registration-popup__extra">Дополнительно</p>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox">
+                <span></span>
+                <p>Я достиг 18 и принимаю правила и <a href="##">Условия</a></p>
+              </label>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox" checked>
+                <span></span>
+                <p>Получать уведомления на E-mail и SMS</p>
+              </label>
+            </form>
+            <form id="smsRegistrationForm">
+              <label>
+                <input type="tel" name="tel" placeholder="Телефон">
+              </label>
+              <label>
+                <input type="password" name="password" placeholder="Код SMS">
+              </label>
+              <div class="registration-popup__choose-currency">
+                <p class="registration-popup__choose-currency__text">Выберете валюту:</p>
+                <div class="registration-popup__choose-currency__tabs">
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>USD</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>AZN</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency">
+                    <span>RU</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="currency" checked>
+                    <span>UAH</span>
+                  </label>
+                </div>
+              </div>
+              <label>
+                <button type="submit">РЕГИСТРАЦИЯ</button>
+              </label>
+              <p class="registration-popup__extra">Дополнительно</p>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox">
+                <span></span>
+                <p>Я достиг 18 и принимаю правила и <a href="##">Условия</a></p>
+              </label>
+              <label class="registration-popup__checkbox-label">
+                <input type="checkbox" checked>
+                <span></span>
+                <p>Получать уведомления на E-mail и SMS</p>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="registration-popup__right">
+        <img src="images/popups/registration_img.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<main>
+  <section class="tabs">
+    <ul>
+      <li>
+        <a href="##">ПРОФАЙЛ</a>
+      </li>
+      <li class="active">
+        <a href="##">БАЛАНС</a>
+      </li>
+      <li>
+        <a href="##">ИСТОРИЯ</a>
+      </li>
+      <li>
+        <a href="##">СООБЩЕНИЯ</a>
+      </li>
+    </ul>
+  </section>
+  <section class="balance">
+    <div class="balance__content">
+      <form class="balance__plus">
+        <h3 class="balance__title">ПОПОЛНИТЬ СЧЕТ</h3>
+        <label>
+          <input type="text" name="amount" placeholder="СУММА">
+        </label>
+        <label class="balance__currency-select" id="currencyPlusLabel">
+          <input id="currencyPlusInput" type="text" name="currency" placeholder="ВАЛЮТА" readonly>
+          <ul id="currencyPlusDrop">
+            <li class="balance__currency-plus-options">€</li>
+            <li class="balance__currency-plus-options">$</li>
+            <li class="balance__currency-plus-options">Kč</li>
+          </ul>
+        </label>
+        <label class="balance__way-select" id="wayLabel">
+          <input id="wayInput" type="text" name="currency" placeholder="Способ транзакции" readonly>
+          <ul id="wayDrop">
+            <li class="balance__way-options">Visa</li>
+            <li class="balance__way-options">mastercard</li>
+            <li class="balance__way-options">american express</li>
+          </ul>
+        </label>
+        <label class="balance__confirm">
+          <input type="checkbox">
+          <span></span>
+          <p>Я подтверждаю, что плачу со своей карты.</p>
+        </label>
+        <label>
+          <input type="submit" value="ПОПОЛНИТЬ">
+        </label>
+      </form>
+      <form class="balance__withdrawal">
+        <h3 class="balance__title">ВЫВОД СРЕДСТВ</h3>
+        <label class="balance__withdrawal-payment-select" id="balancePaymentMethodLabel">
+          <input id="balancePaymentMethodInput" type="text" name="payment" placeholder="Выберите платежную систему" readonly>
+          <ul id="balancePaymentDrop">
+            <li class="balance__payment-options">Visa</li>
+            <li class="balance__payment-options">mastercard</li>
+            <li class="balance__payment-options">american express</li>
+          </ul>
+        </label>
+        <label>
+          <input type="text" name="amount" placeholder="СУММА для вывода">
+        </label>
+        <label>
+          <input type="text" name="cardName" placeholder="Реквизиты для вывода / карта">
+        </label>
+        <label class="balance__confirm">
+          <input type="checkbox">
+          <span></span>
+          <p>Я принимаю <a href="##">правила и условия вывода денег</a></p>
+        </label>
+        <label>
+          <input type="submit" value="Вывести деньги">
+        </label>
+      </form>
+      <form class="balance__trade">
+        <h3 class="balance__title">ОБМЕН СРЕДСТВ</h3>
+        <label>
+          <input type="text" name="amount" placeholder="Сумма для вывода">
+        </label>
+        <label class="balance__trade-currency-select" id="tradeCurrencyLabel">
+          <input id="tradeCurrencyInput" type="text" name="currency" placeholder="Валюта" readonly>
+          <ul id="tradeCurrencyDrop">
+            <li class="balance__trade-currency-options">€</li>
+            <li class="balance__trade-currency-options">$</li>
+            <li class="balance__trade-currency-options">Kč</li>
+          </ul>
+        </label>
+        <label>
+          <input type="text" name="cardName" placeholder="Реквизиты для вывода / карта">
+        </label>
+        <label>
+          <input type="submit" value="Обменять">
+        </label>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer__content">
+    <div class="footer__left">
+      <div class="footer__logo">
+        <img src="images/footer/logo_big.svg" alt="">
+      </div>
+      <p class="footer__text">Forliga платформа в мир, где возможности бесконечны! Мы предлагаем игрокам из разных уголков мира погрузиться в захватывающий мир игр и развлечений.</p>
+    </div>
+    <ul class="footer__right">
+      <li>
+        <a href="##">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="##">Terms of Service</a>
+      </li>
+      <li>
+        <a href="##">Development and support Logics7 LTD</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+</body>
+<script src="js/main.min.js"></script>
+<script src="js/header.min.js"></script>
+<script src="js/balance.min.js"></script>
+</html>

@@ -1589,121 +1589,39 @@ main {
   }
 }
 
-.slider .slider__content li img {
-  max-height: 565px;
-  object-position: center;
-  object-fit: cover;
+.tabs {
+  padding-top: 50px;
 }
-.slider .slider__content .owl-dots {
-  text-align: center;
-  padding-bottom: 11px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-.slider .slider__content .owl-dots .owl-dot {
-  width: 10px;
-  height: 10px;
-  background: transparent;
-  border: 1px solid #FFFFFF;
-  margin-right: 7.5px;
-  transition: background 0.3s ease;
-  border-radius: 50%;
-}
-.slider .slider__content .owl-dots .owl-dot:last-child {
-  margin: 0;
-}
-.slider .slider__content .owl-dots .owl-dot.active {
-  background: white;
-}
-
-.game-nav {
-  padding-top: 35px;
-}
-.game-nav .game-nav__content {
+.tabs ul {
   width: 81%;
   max-width: 1170px;
   margin: 0 auto;
   display: flex;
-  gap: 30px;
+  gap: 31px;
 }
 @media (max-width: 750px) {
-  .game-nav .game-nav__content {
+  .tabs ul {
     width: 100%;
     padding: 0 20px;
   }
 }
-.game-nav .game-nav__content .game-nav__search {
-  width: 270px;
-  flex-shrink: 1;
+@media (max-width: 1100px) {
+  .tabs ul {
+    gap: 20px;
+  }
 }
-.game-nav .game-nav__content .game-nav__search label {
-  position: relative;
-  padding: 9px 0;
-  border: 1px solid #ED0073;
-  display: block;
-  width: 100%;
+@media (max-width: 750px) {
+  .tabs ul {
+    display: block;
+  }
 }
-.game-nav .game-nav__content .game-nav__search label input {
-  width: 100%;
-  background: 0;
-  padding: 0 18px 0 40px;
-  border: none;
-  font-size: 14px;
-  line-height: 16px;
-  outline: none;
-  box-sizing: border-box;
-  color: white;
-}
-.game-nav .game-nav__content .game-nav__search label:before {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 20px;
-  height: 20px;
-  background: url("../images/main/search.png");
-}
-.game-nav .game-nav__content .game-nav__search label .game-nav__search-drop {
-  position: absolute;
-  top: 50px;
-  left: -1px;
-  border: 1px solid #ED0073;
-  background: #21063B;
-  width: 101%;
-  display: none;
-  flex-direction: column;
-  gap: 8px;
-  max-height: 200px;
-  overflow: auto;
-}
-.game-nav .game-nav__content .game-nav__search label .game-nav__search-drop a {
-  display: block;
-  font-size: 14px;
-  line-height: 16px;
-  color: white;
-  padding: 12px 20px 13px;
-  border-bottom: 1px solid #ED0073;
-}
-.game-nav .game-nav__content .game-nav__search label .game-nav__search-drop a:last-child {
-  border-bottom: none;
-}
-.game-nav .game-nav__content .game-nav__search label .game-nav__search-drop.show {
-  display: flex;
-}
-.game-nav .game-nav__content .game-nav__tabs {
-  flex-shrink: 10;
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-between;
-}
-.game-nav .game-nav__content .game-nav__tabs li {
+.tabs ul li {
   border: 1.5px solid #ED0073;
   transition: all 0.3s ease;
+  flex-basis: 0;
+  flex-grow: 1;
 }
-.game-nav .game-nav__content .game-nav__tabs li a {
+.tabs ul li a {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -1713,21 +1631,34 @@ main {
   display: block;
 }
 @media (hover: hover) and (pointer: fine) {
-  .game-nav .game-nav__content .game-nav__tabs li:hover {
+  .tabs ul li:hover {
     background: #ED0073;
   }
 }
-.game-nav .game-nav__content .game-nav__tabs li.active {
+.tabs ul li.active {
   background: #ED0073;
 }
-.game-nav .game-nav__content .game-nav__tabs li a {
-  width: 200px;
+.tabs ul li a {
+  width: auto;
+  font-weight: 500;
+}
+@media (max-width: 750px) {
+  .tabs ul li {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .tabs ul li:last-child {
+    margin-bottom: 0;
+  }
+  .tabs ul li a {
+    width: 100%;
+  }
 }
 
-.games {
-  padding-top: 21px;
+.profile {
+  padding-top: 60px;
 }
-.games .games__content {
+.profile .profile__content {
   width: 81%;
   max-width: 1170px;
   margin: 0 auto;
@@ -1735,265 +1666,1644 @@ main {
   gap: 30px;
 }
 @media (max-width: 750px) {
-  .games .games__content {
+  .profile .profile__content {
     width: 100%;
     padding: 0 20px;
   }
 }
-.games .games__content .games__left {
-  width: 270px;
+.profile .profile__content .profile__info {
+  width: calc(66.66% - 15px);
+  flex-shrink: 0;
 }
-.games .games__content .games__left .games__all-providers {
-  font-size: 14px;
-  line-height: 16px;
-  color: white;
+.profile .profile__content .profile__info .profile__info-forms {
+  display: flex;
+  gap: 30px;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__form-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+  padding-bottom: 27px;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form > label {
   display: block;
-  background: #ED0073;
+  margin-bottom: 15px;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form > label:last-child {
+  margin-bottom: 0;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form > label input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
   border: 1px solid #ED0073;
-  text-align: center;
-  padding: 10px 0;
-}
-.games .games__content .games__left .games__ads {
-  padding-top: 29px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.games .games__content .games__left .games__ads li a img {
-  max-height: 433px;
-}
-.games .games__content .games__left .games__ads li:first-child a img {
-  max-height: 371px;
-}
-.games .games__content .games__right {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.games .games__content .games__right li {
-  width: calc(33.3% - 20px);
-  height: 203px;
-}
-.games .games__content .games__right li a {
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
   display: block;
-  height: 100%;
+  width: 100%;
 }
-.games .games__content .games__right li a img {
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form > label input::placeholder {
+  color: white;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form > label input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form > label input {
+    padding: 12px 12px 13px;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender {
+    display: block;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-title {
+  width: 133px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 0 13px;
+  text-align: center;
+  border: 1px solid #ED0073;
+  text-transform: uppercase;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-options {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-options {
+    justify-content: normal;
+    gap: 20px;
+    margin-top: 15px;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-options label {
+  display: flex;
+  justify-content: space-between;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-options label input {
+  display: none;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-options label span {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  position: relative;
+  padding-left: 30px;
+  display: block;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-options label span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 14px;
+  height: 14px;
+  border: 1px solid #ED0073;
+  transition: all 0.3s ease;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-options label > input[type=radio]:checked + span:before {
+  background: #ED0073;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth {
+  margin: 15px 0;
+  display: flex;
+  gap: 12px;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth {
+    display: block;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-title {
+  width: 133px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 0 13px;
+  text-align: center;
+  border: 1px solid #ED0073;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: auto;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label {
+  display: flex;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 0 13px;
+  text-align: center;
+  width: 100%;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label input::placeholder {
+  color: white;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label input {
+    padding: 12px 12px 13px;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label:nth-child(1) {
+  width: 39px;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label:nth-child(1) {
+    width: 20%;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label:nth-child(2) {
+  width: 86px;
+  position: relative;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label:nth-child(2) {
+    width: 45%;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label:nth-child(2):before {
+  content: "/";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  position: absolute;
+  left: -13px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label:nth-child(2):after {
+  content: "/";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  position: absolute;
+  right: -13px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label:nth-child(3) {
+  width: 70px;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs label:nth-child(3) {
+    width: 35%;
+  }
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__birth .profile__birth-inputs {
+    justify-content: normal;
+    gap: 20px;
+    margin-top: 15px;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__form-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+  padding-bottom: 27px;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select {
+  position: relative;
+  cursor: pointer;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select:after {
+  content: "";
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15px;
+  height: 8px;
+  background: url("../images/profile/arrow.png");
+  transition: all 0.3s ease;
+}
+@media (max-width: 1100px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select:after {
+    right: 18px;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select input::placeholder {
+  color: white;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select input:hover {
+    color: #ed0073;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select ul {
+  position: absolute;
+  background: #21063B;
+  border: 1px solid #ed0073;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select ul li {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  text-transform: uppercase;
+  padding: 12px 20px 13px;
+  border-bottom: 1px solid #ed0073;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select ul li:last-child {
+  border-bottom: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select ul li:hover {
+    background: #260745;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select.show:after {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select.show input {
+  color: #ED0073;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__payment-select.show ul {
+  opacity: 1;
+  z-index: 1000;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__avatar-title {
+  padding-top: 50px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 69px;
+  cursor: pointer;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load input {
+  display: none;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load .profile__load-text {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load .profile__image {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load .profile__image:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(33, 6, 59, 0.6), rgba(33, 6, 59, 0.6));
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load .profile__image:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 26px;
+  background: url("../images/profile/camera.png");
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load .profile__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.games .games__content .games__right .games__right__ad {
+@media (hover: hover) and (pointer: fine) {
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load:hover .profile__load-text {
+    color: #ed0073;
+  }
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load:hover .profile__image:before {
+    opacity: 1;
+  }
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__load:hover .profile__image:after {
+    opacity: 1;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification-title {
+  padding-top: 42px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification:last-child {
+  margin-top: 15px;
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification input[type=checkbox] {
   display: none;
 }
-.games .games__content .games__pagination {
-  display: none;
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ed0073;
+  position: relative;
 }
-
-@media (max-width: 1400px) {
-  .game-nav {
-    padding-top: 33px;
-  }
-  .game-nav .game-nav__content {
-    gap: 27px;
-  }
-  .game-nav .game-nav__content .game-nav__search {
-    width: 166px;
-    flex-shrink: 0;
-  }
-  .game-nav .game-nav__content .game-nav__search label:before {
-    left: 12px;
-  }
-  .game-nav .game-nav__content .game-nav__tabs {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    flex: 1 1 auto;
-  }
-  .game-nav .game-nav__content .game-nav__tabs li {
-    width: 100%;
-  }
-  .game-nav .game-nav__content .game-nav__tabs li a {
-    width: 100%;
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .games .games__content {
-    gap: 30px;
-  }
-  .games .games__content .games__left {
-    width: 166px;
-    flex-shrink: 0;
-  }
-  .games .games__content .games__left .games__ads {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .games .games__content .games__left .games__ads li a img {
-    height: 314px;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  .games .games__content .games__left .games__ads li:first-child a img {
-    height: 268px;
-    width: 100%;
-  }
-  .games .games__content .games__right {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  .games .games__content .games__right li {
-    width: calc(33.3% - 20px);
-    height: auto;
-  }
-  .games .games__content .games__right li a {
-    display: block;
-    height: 100%;
-  }
-  .games .games__content .games__right li a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 15px;
 }
-@media (max-width: 1000px) {
-  .game-nav {
-    padding-top: 24px;
-  }
-  .game-nav .game-nav__content {
-    gap: 0;
-    flex-wrap: wrap;
-  }
-  .game-nav .game-nav__content .game-nav__search {
-    width: 100%;
-    flex-shrink: 0;
-  }
-  .game-nav .game-nav__content .game-nav__search label:before {
-    left: 12px;
-  }
-  .game-nav .game-nav__content .game-nav__tabs {
-    flex-wrap: wrap;
-    gap: 12px;
-    padding-top: 30px;
-  }
-  .game-nav .game-nav__content .game-nav__tabs li {
-    width: 100%;
-  }
-  .game-nav .game-nav__content .game-nav__tabs li a {
-    width: 100%;
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .games {
-    padding-top: 30px;
-  }
-  .games .games__content {
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  .games .games__content .games__left {
-    width: 100%;
-    flex-shrink: 0;
-  }
-  .games .games__content .games__left .games__ads {
-    display: none;
-  }
-  .games .games__content .games__right {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  .games .games__content .games__right li {
-    width: 100%;
-    height: auto;
-  }
-  .games .games__content .games__right li a {
-    display: block;
-    height: 100%;
-  }
-  .games .games__content .games__right li a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  .games .games__content .games__right .games__right__ad {
-    display: block;
-    width: 100%;
-    max-height: 460px;
-  }
-  .games .games__content .games__right .games__right__ad a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  .games .games__content .games__pagination {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 36px;
-    width: 100%;
-  }
-  .games .games__content .games__pagination a {
-    display: block;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    color: rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
-  }
-  .games .games__content .games__pagination a.active {
-    color: white;
-  }
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification p a {
+  color: white;
+  text-decoration: underline !important;
 }
-@media (max-width: 1000px) and (hover: hover) and (pointer: fine) {
-  .games .games__content .games__pagination a:hover {
-    color: white;
-  }
-}
-@media (max-width: 1000px) {
-  .games .games__content .games__pagination .games__pagination-back {
-    border: 1px solid #ED0073;
-    line-height: normal;
-    width: 44px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .games .games__content .games__pagination .games__pagination-back img {
-    width: 20px;
-    height: 20px;
-  }
-}
-@media (max-width: 1000px) {
-  .games .games__content .games__pagination .games__pagination-forward {
-    background: #ED0073;
-    border: 1px solid #ED0073;
-    line-height: normal;
-    width: 59px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .games .games__content .games__pagination .games__pagination-forward img {
-    transform: rotate(180deg);
-    width: 20px;
-    height: 20px;
-  }
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification > input[type=checkbox]:checked + span:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: #ed0073;
 }
 @media (max-width: 750px) {
-  .slider .slider__content li img {
-    height: 232px;
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification {
+    display: flex;
+    align-items: flex-start;
+  }
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification span {
+    flex-shrink: 0;
+  }
+}
+.profile .profile__content .profile__info .profile__info-forms .profile__right-form .profile__notification:last-child {
+  margin-top: 25px;
+}
+.profile .profile__content .profile__info > label {
+  width: calc(50% - 15px);
+  display: block;
+  margin-top: 30px;
+}
+.profile .profile__content .profile__info > label input[type=submit] {
+  padding: 10.5px 0;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  text-align: center;
+  background: #ED0073;
+  border: none;
+  outline: none;
+  display: block;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+}
+.profile .profile__content .profile__password-form {
+  width: calc(33.33% - 15px);
+}
+.profile .profile__content .profile__password-form .profile__form-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+  padding-bottom: 27px;
+}
+.profile .profile__content .profile__password-form label {
+  margin-bottom: 15px;
+  display: block;
+}
+.profile .profile__content .profile__password-form label input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+.profile .profile__content .profile__password-form label input::placeholder {
+  color: white;
+}
+.profile .profile__content .profile__password-form label input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .profile .profile__content .profile__password-form label input {
+    padding: 12px 12px 13px;
+  }
+}
+.profile .profile__content .profile__password-form label input[type=submit] {
+  padding: 10.5px 0;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  text-align: center;
+  background: #ED0073;
+  border: none;
+  outline: none;
+  display: block;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.balance {
+  padding-top: 60px;
+}
+.balance .balance__content {
+  width: 81%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 750px) {
+  .balance .balance__content {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+.balance .balance__content form {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.balance .balance__content form .balance__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  padding-bottom: 27px;
+}
+.balance .balance__content form > label {
+  display: block;
+  margin-bottom: 15px;
+}
+.balance .balance__content form > label input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+.balance .balance__content form > label input::placeholder {
+  color: white;
+}
+.balance .balance__content form > label input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .balance .balance__content form > label input {
+    padding: 12px 12px 13px;
+  }
+}
+.balance .balance__content form > label input[type=submit] {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  padding: 10.5px 0;
+  width: 170px;
+  display: block;
+  text-align: center;
+  background: #ed0073;
+  margin-top: 15px;
+}
+.balance .balance__content form .balance__currency-select {
+  position: relative;
+  cursor: pointer;
+}
+.balance .balance__content form .balance__currency-select:after {
+  content: "";
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15px;
+  height: 8px;
+  background: url("../images/profile/arrow.png");
+  transition: all 0.3s ease;
+}
+@media (max-width: 1100px) {
+  .balance .balance__content form .balance__currency-select:after {
+    right: 18px;
+  }
+}
+.balance .balance__content form .balance__currency-select input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.balance .balance__content form .balance__currency-select input::placeholder {
+  color: white;
+}
+.balance .balance__content form .balance__currency-select input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .balance .balance__content form .balance__currency-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__currency-select input:hover {
+    color: #ed0073;
+  }
+}
+.balance .balance__content form .balance__currency-select ul {
+  position: absolute;
+  background: #21063B;
+  border: 1px solid #ed0073;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.balance .balance__content form .balance__currency-select ul li {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  text-transform: uppercase;
+  padding: 12px 20px 13px;
+  border-bottom: 1px solid #ed0073;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .balance .balance__content form .balance__currency-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+.balance .balance__content form .balance__currency-select ul li:last-child {
+  border-bottom: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__currency-select ul li:hover {
+    background: #260745;
+  }
+}
+.balance .balance__content form .balance__currency-select.show:after {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.balance .balance__content form .balance__currency-select.show input {
+  color: #ED0073;
+}
+.balance .balance__content form .balance__currency-select.show ul {
+  opacity: 1;
+  z-index: 1000;
+}
+.balance .balance__content form .balance__way-select {
+  position: relative;
+  cursor: pointer;
+}
+.balance .balance__content form .balance__way-select:after {
+  content: "";
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15px;
+  height: 8px;
+  background: url("../images/profile/arrow.png");
+  transition: all 0.3s ease;
+}
+@media (max-width: 1100px) {
+  .balance .balance__content form .balance__way-select:after {
+    right: 18px;
+  }
+}
+.balance .balance__content form .balance__way-select input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.balance .balance__content form .balance__way-select input::placeholder {
+  color: white;
+}
+.balance .balance__content form .balance__way-select input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .balance .balance__content form .balance__way-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__way-select input:hover {
+    color: #ed0073;
+  }
+}
+.balance .balance__content form .balance__way-select ul {
+  position: absolute;
+  background: #21063B;
+  border: 1px solid #ed0073;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.balance .balance__content form .balance__way-select ul li {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  text-transform: uppercase;
+  padding: 12px 20px 13px;
+  border-bottom: 1px solid #ed0073;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .balance .balance__content form .balance__way-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+.balance .balance__content form .balance__way-select ul li:last-child {
+  border-bottom: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__way-select ul li:hover {
+    background: #260745;
+  }
+}
+.balance .balance__content form .balance__way-select.show:after {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.balance .balance__content form .balance__way-select.show input {
+  color: #ED0073;
+}
+.balance .balance__content form .balance__way-select.show ul {
+  opacity: 1;
+  z-index: 1000;
+}
+.balance .balance__content form .balance__confirm {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.balance .balance__content form .balance__confirm:last-child {
+  margin-top: 15px;
+}
+.balance .balance__content form .balance__confirm input[type=checkbox] {
+  display: none;
+}
+.balance .balance__content form .balance__confirm span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ed0073;
+  position: relative;
+}
+.balance .balance__content form .balance__confirm p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+.balance .balance__content form .balance__confirm p a {
+  color: white;
+  text-decoration: underline !important;
+}
+.balance .balance__content form .balance__confirm > input[type=checkbox]:checked + span:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: #ed0073;
+}
+@media (max-width: 750px) {
+  .balance .balance__content form .balance__confirm {
+    display: flex;
+    align-items: flex-start;
+  }
+  .balance .balance__content form .balance__confirm span {
+    flex-shrink: 0;
+  }
+}
+.balance .balance__content form .balance__withdrawal-payment-select {
+  position: relative;
+  cursor: pointer;
+}
+.balance .balance__content form .balance__withdrawal-payment-select:after {
+  content: "";
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15px;
+  height: 8px;
+  background: url("../images/profile/arrow.png");
+  transition: all 0.3s ease;
+}
+@media (max-width: 1100px) {
+  .balance .balance__content form .balance__withdrawal-payment-select:after {
+    right: 18px;
+  }
+}
+.balance .balance__content form .balance__withdrawal-payment-select input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.balance .balance__content form .balance__withdrawal-payment-select input::placeholder {
+  color: white;
+}
+.balance .balance__content form .balance__withdrawal-payment-select input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .balance .balance__content form .balance__withdrawal-payment-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__withdrawal-payment-select input:hover {
+    color: #ed0073;
+  }
+}
+.balance .balance__content form .balance__withdrawal-payment-select ul {
+  position: absolute;
+  background: #21063B;
+  border: 1px solid #ed0073;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.balance .balance__content form .balance__withdrawal-payment-select ul li {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  text-transform: uppercase;
+  padding: 12px 20px 13px;
+  border-bottom: 1px solid #ed0073;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .balance .balance__content form .balance__withdrawal-payment-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+.balance .balance__content form .balance__withdrawal-payment-select ul li:last-child {
+  border-bottom: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__withdrawal-payment-select ul li:hover {
+    background: #260745;
+  }
+}
+.balance .balance__content form .balance__withdrawal-payment-select.show:after {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.balance .balance__content form .balance__withdrawal-payment-select.show input {
+  color: #ED0073;
+}
+.balance .balance__content form .balance__withdrawal-payment-select.show ul {
+  opacity: 1;
+  z-index: 1000;
+}
+.balance .balance__content form .balance__trade-currency-select {
+  position: relative;
+  cursor: pointer;
+}
+.balance .balance__content form .balance__trade-currency-select:after {
+  content: "";
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15px;
+  height: 8px;
+  background: url("../images/profile/arrow.png");
+  transition: all 0.3s ease;
+}
+@media (max-width: 1100px) {
+  .balance .balance__content form .balance__trade-currency-select:after {
+    right: 18px;
+  }
+}
+.balance .balance__content form .balance__trade-currency-select input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.balance .balance__content form .balance__trade-currency-select input::placeholder {
+  color: white;
+}
+.balance .balance__content form .balance__trade-currency-select input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .balance .balance__content form .balance__trade-currency-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__trade-currency-select input:hover {
+    color: #ed0073;
+  }
+}
+.balance .balance__content form .balance__trade-currency-select ul {
+  position: absolute;
+  background: #21063B;
+  border: 1px solid #ed0073;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.balance .balance__content form .balance__trade-currency-select ul li {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  color: white;
+  text-transform: uppercase;
+  padding: 12px 20px 13px;
+  border-bottom: 1px solid #ed0073;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .balance .balance__content form .balance__trade-currency-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+.balance .balance__content form .balance__trade-currency-select ul li:last-child {
+  border-bottom: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__trade-currency-select ul li:hover {
+    background: #260745;
+  }
+}
+.balance .balance__content form .balance__trade-currency-select.show:after {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.balance .balance__content form .balance__trade-currency-select.show input {
+  color: #ED0073;
+}
+.balance .balance__content form .balance__trade-currency-select.show ul {
+  opacity: 1;
+  z-index: 1000;
+}
+
+@media (max-width: 1100px) {
+  .profile {
+    padding-top: 44px;
+  }
+  .profile .profile__content {
+    display: block;
+  }
+  .profile .profile__content .profile__info {
+    width: 100%;
+  }
+  .profile .profile__content .profile__info .profile__info-forms {
+    display: block;
+  }
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-title {
+    width: 100px;
+  }
+  .profile .profile__content .profile__info .profile__info-forms .profile__left-form .profile__gender .profile__gender-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: 0;
+  }
+  .profile .profile__content .profile__info .profile__info-forms .profile__right-form {
+    padding-top: 44px;
+  }
+  .profile .profile__content .profile__info > label {
+    width: 100%;
+  }
+  .profile .profile__content .profile__password-form {
+    width: 100%;
+    padding-top: 44px;
+  }
+}
+@media (max-width: 900px) {
+  .balance {
+    padding-top: 0;
+  }
+  .balance .balance__content {
+    display: block;
+  }
+  .balance .balance__content form .balance__title {
+    padding-top: 44px;
+  }
+  .balance .balance__content form > label {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .balance .balance__content form > label input {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    padding: 12px 20px 13px;
+    border: 1px solid #ED0073;
+    color: white;
+    text-transform: uppercase;
+    background: none;
+    outline: none;
+    display: block;
+    width: 100%;
+  }
+  .balance .balance__content form > label input::placeholder {
+    color: white;
+  }
+  .balance .balance__content form > label input:-webkit-autofill {
+    transition: all 5000s ease-in-out 0s;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+  }
+}
+@media (max-width: 900px) and (max-width: 1440px) {
+  .balance .balance__content form > label input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form > label input[type=submit] {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__currency-select {
+    position: relative;
+    cursor: pointer;
+  }
+  .balance .balance__content form .balance__currency-select:after {
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 15px;
+    height: 8px;
+    background: url("../images/profile/arrow.png");
+    transition: all 0.3s ease;
+  }
+}
+@media (max-width: 900px) and (max-width: 1100px) {
+  .balance .balance__content form .balance__currency-select:after {
+    right: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__currency-select input {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    padding: 12px 20px 13px;
+    border: 1px solid #ED0073;
+    color: white;
+    text-transform: uppercase;
+    background: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .balance .balance__content form .balance__currency-select input::placeholder {
+    color: white;
+  }
+  .balance .balance__content form .balance__currency-select input:-webkit-autofill {
+    transition: all 5000s ease-in-out 0s;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+  }
+}
+@media (max-width: 900px) and (max-width: 1440px) {
+  .balance .balance__content form .balance__currency-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__currency-select input:hover {
+    color: #ed0073;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__currency-select ul {
+    position: absolute;
+    background: #21063B;
+    border: 1px solid #ed0073;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  .balance .balance__content form .balance__currency-select ul li {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 20px 13px;
+    border-bottom: 1px solid #ed0073;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
+@media (max-width: 900px) and (max-width: 1100px) {
+  .balance .balance__content form .balance__currency-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__currency-select ul li:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__currency-select ul li:hover {
+    background: #260745;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__currency-select.show:after {
+    transform: translate(0, -50%) rotate(180deg);
+  }
+  .balance .balance__content form .balance__currency-select.show input {
+    color: #ED0073;
+  }
+  .balance .balance__content form .balance__currency-select.show ul {
+    opacity: 1;
+    z-index: 1000;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__way-select {
+    position: relative;
+    cursor: pointer;
+  }
+  .balance .balance__content form .balance__way-select:after {
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 15px;
+    height: 8px;
+    background: url("../images/profile/arrow.png");
+    transition: all 0.3s ease;
+  }
+}
+@media (max-width: 900px) and (max-width: 1100px) {
+  .balance .balance__content form .balance__way-select:after {
+    right: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__way-select input {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    padding: 12px 20px 13px;
+    border: 1px solid #ED0073;
+    color: white;
+    text-transform: uppercase;
+    background: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .balance .balance__content form .balance__way-select input::placeholder {
+    color: white;
+  }
+  .balance .balance__content form .balance__way-select input:-webkit-autofill {
+    transition: all 5000s ease-in-out 0s;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+  }
+}
+@media (max-width: 900px) and (max-width: 1440px) {
+  .balance .balance__content form .balance__way-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__way-select input:hover {
+    color: #ed0073;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__way-select ul {
+    position: absolute;
+    background: #21063B;
+    border: 1px solid #ed0073;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  .balance .balance__content form .balance__way-select ul li {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 20px 13px;
+    border-bottom: 1px solid #ed0073;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
+@media (max-width: 900px) and (max-width: 1100px) {
+  .balance .balance__content form .balance__way-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__way-select ul li:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__way-select ul li:hover {
+    background: #260745;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__way-select.show:after {
+    transform: translate(0, -50%) rotate(180deg);
+  }
+  .balance .balance__content form .balance__way-select.show input {
+    color: #ED0073;
+  }
+  .balance .balance__content form .balance__way-select.show ul {
+    opacity: 1;
+    z-index: 1000;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__confirm {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+  .balance .balance__content form .balance__confirm:last-child {
+    margin-top: 15px;
+  }
+  .balance .balance__content form .balance__confirm input[type=checkbox] {
+    display: none;
+  }
+  .balance .balance__content form .balance__confirm span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ed0073;
+    position: relative;
+  }
+  .balance .balance__content form .balance__confirm p {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 15px;
+  }
+  .balance .balance__content form .balance__confirm p a {
+    color: white;
+    text-decoration: underline !important;
+  }
+  .balance .balance__content form .balance__confirm > input[type=checkbox]:checked + span:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #ed0073;
+  }
+}
+@media (max-width: 900px) and (max-width: 750px) {
+  .balance .balance__content form .balance__confirm {
+    display: flex;
+    align-items: flex-start;
+  }
+  .balance .balance__content form .balance__confirm span {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__withdrawal-payment-select {
+    position: relative;
+    cursor: pointer;
+  }
+  .balance .balance__content form .balance__withdrawal-payment-select:after {
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 15px;
+    height: 8px;
+    background: url("../images/profile/arrow.png");
+    transition: all 0.3s ease;
+  }
+}
+@media (max-width: 900px) and (max-width: 1100px) {
+  .balance .balance__content form .balance__withdrawal-payment-select:after {
+    right: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__withdrawal-payment-select input {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    padding: 12px 20px 13px;
+    border: 1px solid #ED0073;
+    color: white;
+    text-transform: uppercase;
+    background: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .balance .balance__content form .balance__withdrawal-payment-select input::placeholder {
+    color: white;
+  }
+  .balance .balance__content form .balance__withdrawal-payment-select input:-webkit-autofill {
+    transition: all 5000s ease-in-out 0s;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+  }
+}
+@media (max-width: 900px) and (max-width: 1440px) {
+  .balance .balance__content form .balance__withdrawal-payment-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__withdrawal-payment-select input:hover {
+    color: #ed0073;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__withdrawal-payment-select ul {
+    position: absolute;
+    background: #21063B;
+    border: 1px solid #ed0073;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  .balance .balance__content form .balance__withdrawal-payment-select ul li {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 20px 13px;
+    border-bottom: 1px solid #ed0073;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
+@media (max-width: 900px) and (max-width: 1100px) {
+  .balance .balance__content form .balance__withdrawal-payment-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__withdrawal-payment-select ul li:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__withdrawal-payment-select ul li:hover {
+    background: #260745;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__withdrawal-payment-select.show:after {
+    transform: translate(0, -50%) rotate(180deg);
+  }
+  .balance .balance__content form .balance__withdrawal-payment-select.show input {
+    color: #ED0073;
+  }
+  .balance .balance__content form .balance__withdrawal-payment-select.show ul {
+    opacity: 1;
+    z-index: 1000;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__trade-currency-select {
+    position: relative;
+    cursor: pointer;
+  }
+  .balance .balance__content form .balance__trade-currency-select:after {
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 15px;
+    height: 8px;
+    background: url("../images/profile/arrow.png");
+    transition: all 0.3s ease;
+  }
+}
+@media (max-width: 900px) and (max-width: 1100px) {
+  .balance .balance__content form .balance__trade-currency-select:after {
+    right: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__trade-currency-select input {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    padding: 12px 20px 13px;
+    border: 1px solid #ED0073;
+    color: white;
+    text-transform: uppercase;
+    background: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .balance .balance__content form .balance__trade-currency-select input::placeholder {
+    color: white;
+  }
+  .balance .balance__content form .balance__trade-currency-select input:-webkit-autofill {
+    transition: all 5000s ease-in-out 0s;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+  }
+}
+@media (max-width: 900px) and (max-width: 1440px) {
+  .balance .balance__content form .balance__trade-currency-select input {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__trade-currency-select input:hover {
+    color: #ed0073;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__trade-currency-select ul {
+    position: absolute;
+    background: #21063B;
+    border: 1px solid #ed0073;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  .balance .balance__content form .balance__trade-currency-select ul li {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 20px 13px;
+    border-bottom: 1px solid #ed0073;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
+@media (max-width: 900px) and (max-width: 1100px) {
+  .balance .balance__content form .balance__trade-currency-select ul li {
+    padding: 12px 12px 13px;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__trade-currency-select ul li:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 900px) and (hover: hover) and (pointer: fine) {
+  .balance .balance__content form .balance__trade-currency-select ul li:hover {
+    background: #260745;
+  }
+}
+@media (max-width: 900px) {
+  .balance .balance__content form .balance__trade-currency-select.show:after {
+    transform: translate(0, -50%) rotate(180deg);
+  }
+  .balance .balance__content form .balance__trade-currency-select.show input {
+    color: #ED0073;
+  }
+  .balance .balance__content form .balance__trade-currency-select.show ul {
+    opacity: 1;
+    z-index: 1000;
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=profile.css.map */

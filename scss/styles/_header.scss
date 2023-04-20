@@ -17,6 +17,9 @@ header {
 
       }
     }
+    .header__balance-mob {
+      display: none;
+    }
     .header__burger-btn {
       display: none;
     }
@@ -171,16 +174,16 @@ header {
               }
             }
           }
-          //.header__balance {
-          //  display: flex;
-          //  align-items: center;
-          //  gap: 15px;
-          //  .header__balance-value {
-          //    font-size: 25px;
-          //    line-height: 29px;
-          //    color: white;
-          //  }
-          //}
+          .header__balance {
+            display: none;
+            align-items: center;
+            gap: 15px;
+            .header__balance-value {
+              font-size: 25px;
+              line-height: 29px;
+              color: white;
+            }
+          }
           .header__last-btns {
             order: 2;
             li {
@@ -230,54 +233,73 @@ header {
           height: 100%;
         }
       }
-      .header__burger-btn {
-        display: block;
-        cursor: pointer;
-        position: relative;
-        height: 14px;
-        width: 20px;
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 2px;
-          width: 100%;
-          background: white;
-          transition: all $anim;
-        }
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 2px;
-          width: 100%;
-          background: white;
-          transition: all $anim;
-        }
-        .header__burger-stripe {
-          position: absolute;
-          top: 6px;
-          left: 0;
-          height: 2px;
-          width: 100%;
-          background: white;
-          transition: all $anim;
-          opacity: 1;
-        }
-        &.cross {
-          .header__burger-stripe {
-            opacity: 0;
+      .header__mob-left {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .header__balance-mob {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          img {
+            width: 26px;
+            height: 26px;
           }
-
+          .header__balance-value {
+            font-size: 20px;
+            line-height: 23px;
+            color: white;
+          }
+        }
+        .header__burger-btn {
+          display: block;
+          cursor: pointer;
+          position: relative;
+          height: 14px;
+          width: 20px;
           &:before {
-            transform: rotate(45deg);
-            top: 6px;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: white;
+            transition: all $anim;
           }
           &:after {
-            transform: rotate(-45deg);
-            bottom: 6px;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: white;
+            transition: all $anim;
+          }
+          .header__burger-stripe {
+            position: absolute;
+            top: 6px;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: white;
+            transition: all $anim;
+            opacity: 1;
+          }
+          &.cross {
+            .header__burger-stripe {
+              opacity: 0;
+            }
+
+            &:before {
+              transform: rotate(45deg);
+              top: 6px;
+            }
+            &:after {
+              transform: rotate(-45deg);
+              bottom: 6px;
+            }
           }
         }
       }
@@ -342,16 +364,9 @@ header {
               }
             }
           }
-          //.header__balance {
-          //  display: flex;
-          //  align-items: center;
-          //  gap: 15px;
-          //  .header__balance-value {
-          //    font-size: 25px;
-          //    line-height: 29px;
-          //    color: white;
-          //  }
-          //}
+          .header__balance {
+            display: none;
+          }
           .header__last-btns {
             order: 4;
             width: 100%;

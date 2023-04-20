@@ -496,42 +496,7 @@
              padding: 20px 0;
            }
            .registration-popup__checkbox-label {
-             display: flex;
-             align-items: center;
-             cursor: pointer;
-             &:last-child {
-               margin-top: 15px;
-             }
-             input[type=checkbox] {
-               display: none;
-             }
-             span {
-               display: block;
-               width: 14px;
-               height: 14px;
-               border: 2px solid #ed0073;
-               position: relative;
-             }
-             p {
-               font-weight: 300;
-               font-size: 15px;
-               line-height: 18px;
-               padding-left: 15px;
-               a {
-                 color: white;
-                 text-decoration: underline!important;
-               }
-             }
-             & > input[type=checkbox]:checked + span:before {
-               content: "";
-               position: absolute;
-               left: 50%;
-               top: 50%;
-               transform: translate(-50%, -50%);
-               width: 6px;
-               height: 6px;
-               background: #ed0073;
-             }
+              @include default-checkbox;
            }
          }
        }
@@ -672,44 +637,6 @@
                 line-height: 18px;
                 color: #ED0073;
                 padding: 20px 0;
-              }
-              .registration-popup__checkbox-label {
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                &:last-child {
-                  margin-top: 15px;
-                }
-                input[type=checkbox] {
-                  display: none;
-                }
-                span {
-                  display: block;
-                  width: 14px;
-                  height: 14px;
-                  border: 2px solid #ed0073;
-                  position: relative;
-                }
-                p {
-                  font-weight: 300;
-                  font-size: 15px;
-                  line-height: 18px;
-                  padding-left: 15px;
-                  a {
-                    color: white;
-                    text-decoration: underline!important;
-                  }
-                }
-                & > input[type=checkbox]:checked + span:before {
-                  content: "";
-                  position: absolute;
-                  left: 50%;
-                  top: 50%;
-                  transform: translate(-50%, -50%);
-                  width: 6px;
-                  height: 6px;
-                  background: #ed0073;
-                }
               }
             }
           }
@@ -917,13 +844,6 @@
               }
               .registration-popup__extra {
                 padding: 24px 0 18px;
-              }
-              .registration-popup__checkbox-label {
-                display: flex;
-                align-items: flex-start;
-                span {;
-                  flex-shrink: 0;
-                }
               }
             }
           }

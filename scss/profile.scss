@@ -1,0 +1,484 @@
+@import "styles/_basics.scss";
+
+.tabs {
+  padding-top: 50px;
+  ul {
+    @include default-width;
+    display: flex;
+    gap: 31px;
+    @media (max-width: 1100px) {
+      gap: 20px;
+    }
+    @media (max-width: 750px) {
+      display: block;
+    }
+    li {
+      @include default-btn;
+      flex-basis: 0;
+      flex-grow: 1;
+      a {
+        width: auto;
+        font-weight: 500;
+      }
+      @media (max-width: 750px) {
+        width: 100%;
+        margin-bottom: 24px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+.profile {
+  padding-top: 60px;
+  .profile__content {
+    @include default-width;
+    display: flex;
+    gap: 30px;
+    .profile__info{
+      width: calc(66.66% - 15px);
+      flex-shrink: 0;
+      .profile__info-forms {
+        display: flex;
+        gap: 30px;
+        .profile__left-form {
+          flex-basis: 0;
+          flex-grow: 1;
+          flex-shrink: 1;
+          .profile__form-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            text-transform: uppercase;
+            padding-bottom: 27px;
+          }
+          >label {
+            display: block;
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            input {
+              @include default-input;
+            }
+          }
+          .profile__gender {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @media (max-width: 1440px) {
+              display: block;
+            }
+            .profile__gender-title {
+              width: 133px;
+              font-weight: 600;
+              font-size: 10px;
+              line-height: 145%;
+              padding: 12px 0 13px;
+              text-align: center;
+              border: 1px solid #ED0073;
+              text-transform: uppercase;
+            }
+            .profile__gender-options {
+              display: flex;
+              justify-content: space-between;
+              flex-grow: 1;
+              @media (max-width: 1440px) {
+                justify-content: normal;
+                gap: 20px;
+                margin-top: 15px;
+              }
+              label {
+                display: flex;
+                justify-content: space-between;
+                input {
+                  display: none;
+                }
+                span {
+                  font-weight: 300;
+                  font-size: 15px;
+                  line-height: 18px;
+                  position: relative;
+                  padding-left: 30px;
+                  display: block;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(0 , -50%);
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid #ED0073;
+                    transition: all $anim;
+                  }
+                }
+                & > input[type=radio]:checked + span:before {
+                  background: #ED0073;
+                }
+              }
+            }
+          }
+          .profile__birth {
+            margin: 15px 0;
+            display: flex;
+            gap: 12px;
+            @media (max-width: 1440px) {
+              display: block;
+            }
+            .profile__birth-title {
+              width: 133px;
+              font-weight: 600;
+              font-size: 10px;
+              line-height: 145%;
+              padding: 12px 0 13px;
+              text-align: center;
+              border: 1px solid #ED0073;
+              text-transform: uppercase;
+              flex-shrink: 0;
+            }
+            .profile__birth-inputs {
+              display: flex;
+              justify-content: space-between;
+              flex-shrink: 0;
+              flex-grow: 1;
+              width: auto;
+              label {
+                display: flex;
+                input {
+                  @include default-input;
+                  font-weight: 600;
+                  font-size: 10px;
+                  line-height: 145%;
+                  padding: 12px 0 13px;
+                  text-align: center;
+                  width: 100%;
+                  &::placeholder {
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+                }
+                &:nth-child(1) {
+                  width: 39px;
+                  @media (max-width: 1440px) {
+                    width: 20%;
+                  }
+                }
+                &:nth-child(2) {
+                  width: 86px;
+                  position: relative;
+                  @media (max-width: 1440px) {
+                    width: 45%;
+                  }
+                  &:before {
+                    content: "/";
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 18px;
+                    position: absolute;
+                    left: -13px;
+                    top: 50%;
+                    transform: translate(0 , -50%);
+                  }
+                  &:after {
+                    content: "/";
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 18px;
+                    position: absolute;
+                    right: -13px;
+                    top: 50%;
+                    transform: translate(0 , -50%);
+                  }
+                }
+                &:nth-child(3) {
+                  width: 70px;
+                  @media (max-width: 1440px) {
+                    width: 35%;
+                  }
+                }
+              }
+              @media (max-width: 1440px) {
+                justify-content: normal;
+                gap: 20px;
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+        .profile__right-form {
+          flex-basis: 0;
+          flex-grow: 1;
+          flex-shrink: 0;
+          .profile__form-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            text-transform: uppercase;
+            padding-bottom: 27px;
+          }
+          .profile__payment-select {
+            @include default-select;
+          }
+          .profile__avatar-title {
+            padding-top: 50px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            text-transform: uppercase;
+          }
+          .profile__load {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 69px;
+            cursor: pointer;
+            input {
+              display: none;
+            }
+            .profile__load-text {
+              font-weight: 600;
+              font-size: 10px;
+              line-height: 145%;
+              text-transform: uppercase;
+              transition: all $anim;
+            }
+            .profile__image {
+              border-radius: 50%;
+              overflow: hidden;
+              position: relative;
+              &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(33, 6, 59, 0.6), rgba(33, 6, 59, 0.6));
+                transition: all $anim;
+                opacity: 0;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50% , -50%);
+                width: 28px;
+                height: 26px;
+                background: url("../images/profile/camera.png");
+                transition: all $anim;
+                opacity: 0;
+              }
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                .profile__load-text {
+                  color: #ed0073;
+                }
+                .profile__image {
+                  &:before {
+                    opacity: 1;
+                  }
+                  &:after {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+          .profile__notification-title {
+            padding-top: 42px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            text-transform: uppercase;
+          }
+          .profile__notification {
+            @include default-checkbox;
+            &:last-child {
+              margin-top: 25px;
+            }
+          }
+        }
+      }
+      >label {
+        width: calc(50% - 15px);
+        display: block;
+        margin-top: 30px;
+        input[type=submit] {
+          @include default-submit;
+        }
+      }
+    }
+    .profile__password-form {
+      width: calc(33.33% - 15px);
+      .profile__form-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23px;
+        text-transform: uppercase;
+        padding-bottom: 27px;
+      }
+      label {
+        margin-bottom: 15px;
+        display: block;
+        input {
+          @include default-input;
+        }
+        input[type=submit] {
+          @include default-submit;
+        }
+      }
+    }
+  }
+}
+
+.balance {
+  padding-top: 60px;
+  .balance__content {
+    @include default-width;
+    display: flex;
+    gap: 30px;
+    form {
+      flex-basis: 0;
+      flex-grow: 1;
+      .balance__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23px;
+        padding-bottom: 27px;
+      }
+      >label {
+        display: block;
+        margin-bottom: 15px;
+        input {
+          @include default-input;
+        }
+        input[type=submit] {
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 145%;
+          color: white;
+          padding: 10.5px 0;
+          width: 170px;
+          display: block;
+          text-align: center;
+          background: #ed0073;
+          margin-top: 15px;
+        }
+      }
+      .balance__currency-select {
+        @include default-select;
+      }
+      .balance__way-select {
+        @include default-select;
+      }
+      .balance__confirm {
+        @include default-checkbox;
+        margin-top: 5px;
+      }
+      .balance__withdrawal-payment-select {
+        @include default-select;
+      }
+      .balance__trade-currency-select {
+        @include default-select;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .profile {
+    padding-top: 44px;
+    .profile__content {
+      display: block;
+      .profile__info{
+        width: 100%;
+        .profile__info-forms {
+          display: block;
+          .profile__left-form {
+            .profile__gender {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              .profile__gender-title {
+                width: 100px;
+              }
+              .profile__gender-options {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                flex-grow: 1;
+                margin-top: 0;
+              }
+            }
+          }
+          .profile__right-form {
+            padding-top: 44px;
+          }
+        }
+        >label {
+          width: 100%;
+        }
+      }
+      .profile__password-form {
+        width: 100%;
+        padding-top: 44px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  .balance {
+    padding-top: 0;
+    .balance__content {
+      display: block;
+      form {
+        .balance__title {
+          padding-top: 44px;
+        }
+        >label {
+          display: block;
+          margin-bottom: 15px;
+          input {
+            @include default-input;
+          }
+          input[type=submit] {
+            width: 100%;
+          }
+        }
+        .balance__currency-select {
+          @include default-select;
+        }
+        .balance__way-select {
+          @include default-select;
+        }
+        .balance__confirm {
+          @include default-checkbox;
+          margin-top: 5px;
+        }
+        .balance__withdrawal-payment-select {
+          @include default-select;
+        }
+        .balance__trade-currency-select {
+          @include default-select;
+        }
+      }
+    }
+  }
+}

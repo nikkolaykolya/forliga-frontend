@@ -2,17 +2,21 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/balance.min.js" />
         <item url="file://$PROJECT_DIR$/js/header.min.js" />
         <item url="file://$PROJECT_DIR$/js/lib/jquery.min.min.js" />
         <item url="file://$PROJECT_DIR$/js/lib/owl.carousel.min.min.js" />
         <item url="file://$PROJECT_DIR$/js/main.min.js" />
+        <item url="file://$PROJECT_DIR$/js/profile.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/balance.min.js" />
       <root url="file://$PROJECT_DIR$/js/header.min.js" />
       <root url="file://$PROJECT_DIR$/js/lib/jquery.min.min.js" />
       <root url="file://$PROJECT_DIR$/js/lib/owl.carousel.min.min.js" />
       <root url="file://$PROJECT_DIR$/js/main.min.js" />
+      <root url="file://$PROJECT_DIR$/js/profile.min.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

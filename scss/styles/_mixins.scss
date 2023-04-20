@@ -1,0 +1,196 @@
+
+@mixin default-width {
+  width: 81%;
+  max-width: 1170px;
+  margin: 0 auto;
+  @media (max-width: 750px) {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@mixin default-btn {
+  border: 1.5px solid #ED0073;
+  transition: all $anim;
+  a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    display: block;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: #ED0073;
+    }
+  }
+  &.active {
+    background: #ED0073;
+  }
+}
+
+@mixin default-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:last-child {
+    margin-top: 15px;
+  }
+  input[type=checkbox] {
+    display: none;
+  }
+  span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ed0073;
+    position: relative;
+  }
+  p {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 15px;
+    a {
+      color: white;
+      text-decoration: underline!important;
+    }
+  }
+  & > input[type=checkbox]:checked + span:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #ed0073;
+  }
+  @media (max-width: 750px) {
+    display: flex;
+    align-items: flex-start;
+    span {;
+      flex-shrink: 0;
+    }
+  }
+}
+
+
+@mixin default-submit {
+  padding: 10.5px 0;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  text-align: center;
+  background: #ED0073;
+  border: none;
+  outline: none;
+  display: block;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@mixin default-input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  &::placeholder {
+    color: white;
+  }
+  &:-webkit-autofill {
+    transition: all 5000s ease-in-out 0s;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 145%;
+  }
+  @media (max-width: 1440px) {
+    padding: 12px 12px 13px;
+  }
+}
+
+
+@mixin default-select {
+  position: relative;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translate(0 , -50%);
+    width: 15px;
+    height: 8px;
+    background: url("../images/profile/arrow.png");
+    transition: all $anim;
+    @media (max-width: 1100px) {
+      right: 18px;
+    }
+  }
+  input {
+    @include default-input;
+    transition: all $anim;
+    cursor: pointer;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: #ed0073;
+      }
+    }
+  }
+  ul {
+    position: absolute;
+    background: #21063B;
+    border: 1px solid #ed0073;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: -1;
+    transition: opacity $anim;
+    opacity: 0;
+    li {
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 145%;
+      color: white;
+      text-transform: uppercase;
+      padding: 12px 20px 13px;
+      border-bottom: 1px solid #ed0073;
+      transition: all $anim;
+      cursor: pointer;
+      @media (max-width: 1100px) {
+        padding: 12px 12px 13px;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background: #260745;
+        }
+      }
+    }
+  }
+  &.show {
+    &:after {
+      transform: translate(0 ,-50%) rotate(180deg);
+    }
+    input {
+      color: #ED0073;
+    }
+    ul {
+      opacity: 1;
+      z-index: 1000;
+    }
+  }
+}
