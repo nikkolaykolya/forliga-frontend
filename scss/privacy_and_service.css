@@ -121,10 +121,13 @@ header .header__content .header__right .header__top .header__first-btns li a {
 }
 @media (hover: hover) and (pointer: fine) {
   header .header__content .header__right .header__top .header__first-btns li:hover {
-    background: #ED0073;
+    background: #FF27A2;
   }
 }
 header .header__content .header__right .header__top .header__first-btns li.active {
+  background: #ED0073;
+}
+header .header__content .header__right .header__top .header__first-btns li:active {
   background: #ED0073;
 }
 header .header__content .header__right .header__top .header__first-btns li a {
@@ -149,6 +152,9 @@ header .header__content .header__right .header__top .header__tabs li a {
   }
 }
 header .header__content .header__right .header__top .header__tabs li a.active {
+  border-color: #ED0073;
+}
+header .header__content .header__right .header__top .header__tabs li a:active {
   border-color: #ED0073;
 }
 header .header__content .header__right .header__top .header__balance {
@@ -180,8 +186,11 @@ header .header__content .header__right .header__top .header__last-btns li a {
 }
 @media (hover: hover) and (pointer: fine) {
   header .header__content .header__right .header__top .header__last-btns li:hover {
-    background: #005DDB;
+    background: #0084FF;
   }
+}
+header .header__content .header__right .header__top .header__last-btns li:active {
+  background: #005DDB;
 }
 header .header__content .header__right .header__bottom {
   width: 100%;
@@ -194,8 +203,6 @@ header .header__content .header__right .header__bottom ul {
   gap: 30px;
 }
 header .header__content .header__right .header__bottom ul li {
-  padding-bottom: 8px;
-  border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
 }
 header .header__content .header__right .header__bottom ul li a {
@@ -203,14 +210,18 @@ header .header__content .header__right .header__bottom ul li a {
   align-items: center;
   gap: 10px;
 }
+header .header__content .header__right .header__bottom ul li a svg {
+  fill: #005DDB;
+  transition: all 0.3s ease;
+}
 header .header__content .header__right .header__bottom ul li a span {
   font-size: 14px;
   line-height: 16px;
   color: white;
 }
 @media (hover: hover) and (pointer: fine) {
-  header .header__content .header__right .header__bottom ul li:hover {
-    border-color: #005DDB;
+  header .header__content .header__right .header__bottom ul li:hover svg {
+    fill: #0084FF;
   }
 }
 
@@ -612,12 +623,18 @@ footer .footer__content .footer__right li a {
   position: absolute;
   right: 20px;
   top: 20px;
+  transition: all 0.3s ease;
 }
 .chat-form > div .cross img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .chat-form > div .cross:hover {
+    background: #FF27A2;
+  }
 }
 @media (max-width: 1100px) {
   .chat-form > div {
@@ -664,21 +681,39 @@ footer .footer__content .footer__right li a {
   width: 100%;
 }
 .chat-form .chat-form__content .chat-form__left form label input {
-  width: 100%;
-  border: 1px solid #ED0073;
-  background: none;
   font-weight: 600;
   font-size: 10px;
   line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
   color: white;
   text-transform: uppercase;
-  padding: 12px 22.7px 13px;
-  display: block;
-  margin-bottom: 20px;
+  background: none;
   outline: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 .chat-form .chat-form__content .chat-form__left form label input::placeholder {
   color: white;
+}
+.chat-form .chat-form__content .chat-form__left form label input:focus {
+  border: 1px solid #FF27A2;
+}
+.chat-form .chat-form__content .chat-form__left form label input:disabled {
+  border: 1px solid #969696;
+}
+.chat-form .chat-form__content .chat-form__left form label input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .chat-form .chat-form__content .chat-form__left form label input {
+    padding: 12px 12px 13px;
+  }
 }
 .chat-form .chat-form__content .chat-form__left form label textarea {
   width: 100%;
@@ -689,10 +724,18 @@ footer .footer__content .footer__right li a {
   display: block;
   box-sizing: border-box;
   resize: none;
+  color: white;
   outline: none;
+  transition: all 0.3s ease;
 }
 .chat-form .chat-form__content .chat-form__left form label textarea::placeholder {
   color: white;
+}
+.chat-form .chat-form__content .chat-form__left form label textarea:focus {
+  border: 1px solid #FF27A2;
+}
+.chat-form .chat-form__content .chat-form__left form label textarea:disabled {
+  border: 1px solid #969696;
 }
 .chat-form .chat-form__content .chat-form__left form label button {
   font-weight: 700;
@@ -706,6 +749,15 @@ footer .footer__content .footer__right li a {
   background: #ED0073;
   margin-top: 26px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .chat-form .chat-form__content .chat-form__left form label button:hover {
+    background: #FF27A2;
+  }
+}
+.chat-form .chat-form__content .chat-form__left form label button:active {
+  background: #ED0073 !important;
 }
 .chat-form .chat-form__content .chat-form__right {
   margin-top: 16px;
@@ -743,12 +795,18 @@ footer .footer__content .footer__right li a {
   position: absolute;
   right: 20px;
   top: 20px;
+  transition: all 0.3s ease;
 }
 .start-popup > div .cross img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .start-popup > div .cross:hover {
+    background: #FF27A2;
+  }
 }
 @media (max-width: 1100px) {
   .start-popup > div {
@@ -856,12 +914,18 @@ footer .footer__content .footer__right li a {
   position: absolute;
   right: 20px;
   top: 20px;
+  transition: all 0.3s ease;
 }
 .enter-popup > div .cross img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .enter-popup > div .cross:hover {
+    background: #FF27A2;
+  }
 }
 @media (max-width: 1100px) {
   .enter-popup > div {
@@ -919,13 +983,16 @@ footer .footer__content .footer__right li a {
   text-align: center;
   transition: all 0.3s ease;
 }
+@media (hover: hover) and (pointer: fine) {
+  .enter-popup .enter-popup__content .enter-popup__left .enter-popup__tabs a:hover {
+    background: #FF27A2;
+  }
+}
 .enter-popup .enter-popup__content .enter-popup__left .enter-popup__tabs a.active {
   background: #ED0073;
 }
-@media (hover: hover) and (pointer: fine) {
-  .enter-popup .enter-popup__content .enter-popup__left .enter-popup__tabs a:hover {
-    background: rgba(237, 0, 115, 0.7);
-  }
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__tabs a:active {
+  background: #ED0073;
 }
 .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form {
   padding-top: 18px;
@@ -945,17 +1012,35 @@ footer .footer__content .footer__right li a {
   font-weight: 600;
   font-size: 10px;
   line-height: 145%;
-  padding: 12px 21px 13px;
-  text-transform: uppercase;
-  color: white;
-  background: none;
+  padding: 12px 20px 13px;
   border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
   outline: none;
   display: block;
   width: 100%;
+  transition: all 0.3s ease;
 }
 .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label input::placeholder {
   color: white;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label input:focus {
+  border: 1px solid #FF27A2;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label input:disabled {
+  border: 1px solid #969696;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label input {
+    padding: 12px 12px 13px;
+  }
 }
 .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label button {
   display: flex;
@@ -971,6 +1056,16 @@ footer .footer__content .footer__right li a {
   outline: none;
   padding: 10.5px 0;
   width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label button:hover {
+    background: #FF27A2;
+  }
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form form label button:active {
+  background: #ED0073;
 }
 .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom {
   display: flex;
@@ -1001,6 +1096,15 @@ footer .footer__content .footer__right li a {
   text-align: center;
   padding: 10.5px 0;
   border: 1px solid #ED0073;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__forget .enter-popup__forget-btn:hover {
+    background: #FF27A2;
+  }
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__forget .enter-popup__forget-btn:active {
+  background: #ED0073 !important;
 }
 .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration {
   width: 185px;
@@ -1018,6 +1122,7 @@ footer .footer__content .footer__right li a {
 .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration .enter-popup__registration-text a {
   text-transform: uppercase;
   color: #ED0073;
+  transition: all 0.3s ease;
 }
 .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration .enter-popup__registration-btn {
   display: block;
@@ -1030,6 +1135,21 @@ footer .footer__content .footer__right li a {
   text-align: center;
   padding: 10.5px 0;
   border: 1px solid #ED0073;
+  background: #ED0073;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration:hover .enter-popup__registration-text a {
+    color: #FF27A2;
+  }
+  .enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration:hover .enter-popup__registration-btn {
+    background: #FF27A2;
+  }
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration:active .enter-popup__registration-text a {
+  color: #ED0073;
+}
+.enter-popup .enter-popup__content .enter-popup__left .enter-popup__forms .enter-popup__mail-form .enter-popup__bottom .enter-popup__registration:active .enter-popup__registration-btn {
   background: #ED0073;
 }
 .enter-popup .enter-popup__content .enter-popup__right {
@@ -1079,12 +1199,18 @@ footer .footer__content .footer__right li a {
   position: absolute;
   right: 20px;
   top: 20px;
+  transition: all 0.3s ease;
 }
 .registration-popup > div .cross img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .registration-popup > div .cross:hover {
+    background: #FF27A2;
+  }
 }
 @media (max-width: 1100px) {
   .registration-popup > div {
@@ -1116,6 +1242,7 @@ footer .footer__content .footer__right li a {
   font-size: 35px;
   line-height: 145%;
   color: #ED0073;
+  text-transform: uppercase;
 }
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs {
   display: flex;
@@ -1135,13 +1262,16 @@ footer .footer__content .footer__right li a {
   text-align: center;
   transition: all 0.3s ease;
 }
+@media (hover: hover) and (pointer: fine) {
+  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs a:hover {
+    background: #FF27A2;
+  }
+}
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs a.active {
   background: #ED0073;
 }
-@media (hover: hover) and (pointer: fine) {
-  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs a:hover {
-    background: rgba(237, 0, 115, 0.7);
-  }
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__tabs a:active {
+  background: #ED0073;
 }
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms {
   padding-top: 16px;
@@ -1162,17 +1292,35 @@ footer .footer__content .footer__right li a {
   font-weight: 600;
   font-size: 10px;
   line-height: 145%;
-  padding: 12px 21px 13px;
-  text-transform: uppercase;
-  color: white;
-  background: none;
+  padding: 12px 20px 13px;
   border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
   outline: none;
   display: block;
   width: 100%;
+  transition: all 0.3s ease;
 }
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=email]::placeholder, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=password]::placeholder, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=tel]::placeholder {
   color: white;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=email]:focus, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=password]:focus, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=tel]:focus {
+  border: 1px solid #FF27A2;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=email]:disabled, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=password]:disabled, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=tel]:disabled {
+  border: 1px solid #969696;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=email]:-webkit-autofill, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=password]:-webkit-autofill, .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=tel]:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=email], .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=password], .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label input[type=tel] {
+    padding: 12px 12px 13px;
+  }
 }
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label button {
   display: block;
@@ -1184,6 +1332,15 @@ footer .footer__content .footer__right li a {
   margin-top: 28px;
   color: white;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label button:hover {
+    background: #FF27A2;
+  }
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form > label button:active {
+  background: #ED0073;
 }
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency {
   display: flex;
@@ -1218,8 +1375,17 @@ footer .footer__content .footer__right li a {
   padding: 7.5px 0;
   border: 1px solid #ED0073;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__tabs label span:hover {
+    background: #FF27A2;
+  }
 }
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__tabs label > input[type=radio]:checked + span {
+  background: #ED0073;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__choose-currency .registration-popup__choose-currency__tabs label > input[type=radio]:active + span {
   background: #ED0073;
 }
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__extra {
@@ -1245,6 +1411,7 @@ footer .footer__content .footer__right li a {
   height: 14px;
   border: 2px solid #ed0073;
   position: relative;
+  transition: all 0.3s ease;
 }
 .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label p {
   font-weight: 300;
@@ -1266,6 +1433,12 @@ footer .footer__content .footer__right li a {
   height: 6px;
   background: #ed0073;
 }
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label > input[type=checkbox]:hover + span {
+  border-color: #FF27A2;
+}
+.registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label > input[type=checkbox]:active + span {
+  border-color: #ed0073;
+}
 @media (max-width: 750px) {
   .registration-popup .registration-popup__content .registration-popup__left .registration-popup__forms .registration-popup__mail-form form .registration-popup__checkbox-label {
     display: flex;
@@ -1279,6 +1452,225 @@ footer .footer__content .footer__right li a {
   padding-right: 20px;
   padding-top: 11px;
 }
+.sms-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100000;
+  display: none;
+}
+.sms-popup > div {
+  background: #21063B;
+  border: 1px solid #005DDB;
+  padding: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-height: 573px;
+  max-width: 970px;
+}
+.sms-popup > div .cross {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #ED0073;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: all 0.3s ease;
+}
+.sms-popup > div .cross img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sms-popup > div .cross:hover {
+    background: #FF27A2;
+  }
+}
+@media (max-width: 1100px) {
+  .sms-popup > div {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 750px) {
+  .sms-popup > div {
+    width: calc(100% - 40px);
+    padding: 64px 16px 40px;
+    max-height: none;
+    height: auto;
+  }
+}
+.sms-popup.show {
+  display: block;
+}
+.sms-popup .sms-popup__content {
+  display: flex;
+  gap: 30px;
+  max-height: 385px;
+}
+@media (max-width: 750px) {
+  .sms-popup .sms-popup__content {
+    height: auto;
+    max-height: none;
+  }
+}
+.sms-popup .sms-popup__content .sms-popup__left {
+  flex-shrink: 0;
+  width: 390px;
+  padding-top: 20px;
+}
+@media (max-width: 1000px) {
+  .sms-popup .sms-popup__content .sms-popup__left {
+    width: 100%;
+  }
+}
+.sms-popup .sms-popup__content .sms-popup__left .sms-popup__title {
+  font-family: "Oswald", serif;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 145%;
+  color: #ED0073;
+}
+.sms-popup .sms-popup__content .sms-popup__left .sms-popup__subtitle {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 145%;
+  padding-top: 5px;
+}
+.sms-popup .sms-popup__content .sms-popup__left form {
+  padding-top: 49px;
+}
+.sms-popup .sms-popup__content .sms-popup__left form > label input {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+  padding: 12px 20px 13px;
+  border: 1px solid #ED0073;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.sms-popup .sms-popup__content .sms-popup__left form > label input::placeholder {
+  color: white;
+}
+.sms-popup .sms-popup__content .sms-popup__left form > label input:focus {
+  border: 1px solid #FF27A2;
+}
+.sms-popup .sms-popup__content .sms-popup__left form > label input:disabled {
+  border: 1px solid #969696;
+}
+.sms-popup .sms-popup__content .sms-popup__left form > label input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 145%;
+}
+@media (max-width: 1440px) {
+  .sms-popup .sms-popup__content .sms-popup__left form > label input {
+    padding: 12px 12px 13px;
+  }
+}
+.sms-popup .sms-popup__content .sms-popup__left form .sms-popup__btns {
+  padding-top: 23px;
+  display: flex;
+  gap: 22px;
+  justify-content: space-between;
+}
+.sms-popup .sms-popup__content .sms-popup__left form .sms-popup__btns label {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: block;
+}
+.sms-popup .sms-popup__content .sms-popup__left form .sms-popup__btns label input {
+  padding: 10.5px 0;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  text-align: center;
+  background: #ED0073;
+  border: none;
+  outline: none;
+  display: block;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .sms-popup .sms-popup__content .sms-popup__left form .sms-popup__btns label input:hover {
+    background: #FF27A2;
+  }
+}
+.sms-popup .sms-popup__content .sms-popup__left form .sms-popup__btns label input:active {
+  background: #ED0073 !important;
+}
+.sms-popup .sms-popup__content .sms-popup__left form .sms-popup__btns a {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 10.5px 0;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 145%;
+  text-align: center;
+  border: 1px solid #ed0073;
+  display: block;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .sms-popup .sms-popup__content .sms-popup__left form .sms-popup__btns a:hover {
+    background: #FF27A2;
+  }
+}
+.sms-popup .sms-popup__content .sms-popup__left form .sms-popup__btns a:active {
+  background: #ED0073 !important;
+}
+.sms-popup .sms-popup__content .sms-popup__right {
+  padding-top: 11px;
+}
+@media (max-width: 1000px) {
+  .sms-popup .sms-popup__content .sms-popup__right {
+    display: none;
+  }
+}
+.sms-popup .sms-popup__content .sms-popup__right .sms-popup__img {
+  position: relative;
+}
+.sms-popup .sms-popup__content .sms-popup__right .sms-popup__img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(237, 0, 115, 0.42) 0%, rgba(237, 0, 115, 0) 100%);
+  z-index: 10;
+}
+.sms-popup .sms-popup__content .sms-popup__right .sms-popup__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 @media (max-width: 1100px) {
   .registration-popup .registration-popup__content {
     display: flex;

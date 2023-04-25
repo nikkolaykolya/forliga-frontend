@@ -13,9 +13,9 @@
       display: block;
     }
     li {
-      @include default-btn;
       flex-basis: 0;
       flex-grow: 1;
+      @include default-btn;
       a {
         width: auto;
         font-weight: 500;
@@ -377,6 +377,16 @@
           text-align: center;
           background: #ed0073;
           margin-top: 15px;
+          transition: all $anim;
+          cursor: pointer;
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              background: #FF27A2;
+            }
+          }
+          &:active {
+            background: #ED0073;
+          }
         }
       }
       .balance__currency-select {
@@ -429,13 +439,16 @@
           @media (max-width: 750px) {
             width: 100%;
           }
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              background: #0084FF;
+            }
+          }
           &.active {
             background: #005DDB;
           }
-          @media (hover: hover) and (pointer: fine) {
-            &:hover {
-              background: #005DDB;
-            }
+          &:active {
+            background: #005DDB;
           }
         }
       }
@@ -462,6 +475,7 @@
             padding: 10px 0;
             border: 1.5px solid #ED0073;
             text-align: center;
+            transition: all $anim;
           }
         }
         .history__table-head {
@@ -471,6 +485,14 @@
         }
         .history__table-row {
           margin-top: 10px;
+          li {
+            cursor: pointer;
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                background: #FF27A2;
+              }
+            }
+          }
         }
       }
       .history__transactions-table {
@@ -554,6 +576,7 @@
             padding: 10px 0;
             border: 1.5px solid #ED0073;
             text-align: center;
+            transition: all $anim;
           }
         }
         .message__table-head {
@@ -563,6 +586,14 @@
         }
         .message__table-row {
           margin-top: 10px;
+          li {
+            cursor: pointer;
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                background: #FF27A2;
+              }
+            }
+          }
         }
       }
       .message__table {

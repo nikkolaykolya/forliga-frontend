@@ -119,3 +119,21 @@ smsFormRegistrationBtn.addEventListener('click', function (){
     smsFormRegistrationBtn.classList.add('active');
     mailFormRegistrationBtn.classList.remove('active');
 })
+
+
+const smsPopup = document.getElementById("smsPopup");
+const smsRegistrationBtn = document.getElementById("smsRegistrationBtn");
+const smsExit = document.getElementById("smsExit");
+
+
+smsRegistrationBtn.addEventListener('click', function () {
+    event.preventDefault();
+    smsPopup.classList.add("show");
+    registrationPopup.classList.remove("show");
+    document.body.style.overflow = 'hidden';
+})
+
+smsExit.addEventListener('click', function () {
+    smsPopup.classList.remove("show");
+    document.body.style.overflow = 'unset';
+})

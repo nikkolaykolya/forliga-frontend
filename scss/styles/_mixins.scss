@@ -23,10 +23,13 @@
   }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background: #ED0073;
+      background: #FF27A2;
     }
   }
   &.active {
+    background: #ED0073;
+  }
+  &:active {
     background: #ED0073;
   }
 }
@@ -47,6 +50,7 @@
     height: 14px;
     border: 2px solid #ed0073;
     position: relative;
+    transition: all $anim;
   }
   p {
     font-weight: 300;
@@ -67,6 +71,12 @@
     width: 6px;
     height: 6px;
     background: #ed0073;
+  }
+  & > input[type=checkbox]:hover + span {
+    border-color: #FF27A2;
+  }
+  & > input[type=checkbox]:active + span {
+    border-color: #ed0073;
   }
   @media (max-width: 750px) {
     display: flex;
@@ -92,6 +102,15 @@
   cursor: pointer;
   text-transform: uppercase;
   width: 100%;
+  transition: all $anim;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: #FF27A2;
+    }
+  }
+  &:active {
+    background: #ED0073!important;
+  }
 }
 
 @mixin default-input {
@@ -106,8 +125,15 @@
   outline: none;
   display: block;
   width: 100%;
+  transition: all $anim;
   &::placeholder {
     color: white;
+  }
+  &:focus {
+    border: 1px solid #FF27A2;
+  }
+  &:disabled {
+    border: 1px solid #969696;
   }
   &:-webkit-autofill {
     transition: all 5000s ease-in-out 0s;

@@ -27,12 +27,18 @@
       position: absolute;
       right: 20px;
       top: 20px;
+      transition: all $anim;
       img {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
 
+      }
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background: #FF27A2;
+        }
       }
     }
     @media (max-width: 1100px) {
@@ -79,21 +85,8 @@
           display: block;
           width: 100%;
           input {
-            width: 100%;
-            border: 1px solid #ED0073;
-            background: none;
-            font-weight: 600;
-            font-size: 10px;
-            line-height: 145%;
-            color: white;
-            text-transform: uppercase;
-            padding: 12px 22.7px 13px;
-            display: block;
+            @include default-input;
             margin-bottom: 20px;
-            outline: none;
-            &::placeholder {
-              color: white;
-            }
           }
           textarea {
             width: 100%;
@@ -104,9 +97,17 @@
             display: block;
             box-sizing: border-box;
             resize: none;
+            color: white;
             outline: none;
             &::placeholder {
               color: white;
+            }
+            transition: all $anim;
+            &:focus {
+              border: 1px solid #FF27A2;
+            }
+            &:disabled {
+              border: 1px solid #969696;
             }
           }
           button {
@@ -121,6 +122,15 @@
             background: #ED0073;
             margin-top: 26px;
             cursor: pointer;
+            transition: all $anim;
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                background: #FF27A2;
+              }
+            }
+            &:active {
+              background: #ED0073!important;
+            }
           }
         }
       }
@@ -239,13 +249,16 @@
           color: white;
           text-align: center;
           transition: all $anim;
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              background: #FF27A2;
+            }
+          }
           &.active {
             background: #ED0073;
           }
-          @media (hover: hover) and (pointer: fine) {
-            &:hover {
-              background: rgba(237, 0, 115, .7);
-            }
+          &:active {
+            background: #ED0073;
           }
         }
       }
@@ -264,20 +277,7 @@
                 margin-top: 0;
               }
               input {
-                font-weight: 600;
-                font-size: 10px;
-                line-height: 145%;
-                padding: 12px 21px 13px;
-                text-transform: uppercase;
-                color: white;
-                background: none;
-                border: 1px solid #ED0073;
-                outline: none;
-                display: block;
-                width: 100%;
-                &::placeholder {
-                  color: white;
-                }
+                @include default-input;
               }
               button {
                 display: flex;
@@ -293,6 +293,16 @@
                 outline: none;
                 padding: 10.5px 0;
                 width: 100%;
+                cursor: pointer;
+                transition: all $anim;
+                @media (hover: hover) and (pointer: fine) {
+                  &:hover {
+                    background: #FF27A2;
+                  }
+                }
+                &:active {
+                  background: #ED0073;
+                }
               }
             }
           }
@@ -321,6 +331,15 @@
                 text-align: center;
                 padding: 10.5px 0;
                 border: 1px solid #ED0073;
+                transition: all $anim;
+                @media (hover: hover) and (pointer: fine) {
+                  &:hover {
+                    background: #FF27A2;
+                  }
+                }
+                &:active {
+                  background: #ED0073!important;
+                }
               }
             }
             .enter-popup__registration {
@@ -335,6 +354,7 @@
                 a {
                   text-transform: uppercase;
                   color: #ED0073;
+                  transition: all $anim;
                 }
               }
               .enter-popup__registration-btn {
@@ -349,6 +369,32 @@
                 padding: 10.5px 0;
                 border: 1px solid #ED0073;
                 background: #ED0073;
+                transition: all $anim;
+                //&:active {
+                //  background: #ED0073!important;
+                //}
+              }
+              @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                  .enter-popup__registration-text {
+                    a {
+                      color: #FF27A2;
+                    }
+                  }
+                  .enter-popup__registration-btn {
+                    background: #FF27A2;
+                  }
+                }
+              }
+              &:active {
+                .enter-popup__registration-text {
+                  a {
+                    color: #ED0073;
+                  }
+                }
+                .enter-popup__registration-btn {
+                  background: #ED0073;
+                }
               }
             }
           }
@@ -384,6 +430,7 @@
        font-size: 35px;
        line-height: 145%;
        color: #ED0073;
+       text-transform: uppercase;
      }
      .registration-popup__tabs {
        display: flex;
@@ -401,13 +448,16 @@
          color: white;
          text-align: center;
          transition: all $anim;
+         @media (hover: hover) and (pointer: fine) {
+           &:hover {
+             background: #FF27A2;
+           }
+         }
          &.active {
            background: #ED0073;
          }
-         @media (hover: hover) and (pointer: fine) {
-           &:hover {
-             background: rgba(237, 0, 115, .7);
-           }
+         &:active {
+           background: #ED0073;
          }
        }
      }
@@ -425,20 +475,7 @@
                margin-bottom: 20px;
              }
              input[type=email], input[type=password], input[type=tel] {
-               font-weight: 600;
-               font-size: 10px;
-               line-height: 145%;
-               padding: 12px 21px 13px;
-               text-transform: uppercase;
-               color: white;
-               background: none;
-               border: 1px solid #ED0073;
-               outline: none;
-               display: block;
-               width: 100%;
-               &::placeholder {
-                 color: white;
-               }
+               @include default-input;
              }
              button {
               display: block;
@@ -450,6 +487,15 @@
                margin-top: 28px;
                color: white;
                cursor: pointer;
+               transition: all $anim;
+               @media (hover: hover) and (pointer: fine) {
+                 &:hover {
+                   background: #FF27A2;
+                 }
+               }
+               &:active {
+                 background: #ED0073;
+               }
              }
            }
            .registration-popup__choose-currency {
@@ -482,8 +528,17 @@
                    padding: 7.5px 0;
                    border: 1px solid #ED0073;
                    cursor: pointer;
+                   transition: all $anim;
+                   @media (hover: hover) and (pointer: fine) {
+                     &:hover {
+                       background: #FF27A2;
+                     }
+                   }
                  }
                  & > input[type=radio]:checked + span {
+                   background: #ED0073;
+                 }
+                 & > input[type=radio]:active + span {
                    background: #ED0073;
                  }
                }
@@ -509,6 +564,111 @@
 
      }
    }
+  }
+}
+
+.sms-popup {
+  @include default-popup;
+  .sms-popup__content {
+    display: flex;
+    gap: 30px;
+    max-height: 385px;
+    @media (max-width: 750px) {
+      height: auto;
+      max-height: none;
+    }
+    .sms-popup__left {
+      flex-shrink: 0;
+      width: 390px;
+      padding-top: 20px;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+      .sms-popup__title {
+        font-family: 'Oswald', serif;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 145%;
+        color: #ED0073;
+      }
+      .sms-popup__subtitle {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 145%;
+        padding-top: 5px;
+      }
+      form {
+        padding-top: 49px;
+        >label {
+          input {
+            @include default-input;
+          }
+        }
+        .sms-popup__btns {
+          padding-top: 23px;
+          display: flex;
+          gap: 22px;
+          justify-content: space-between;
+          label {
+            flex-basis: 0;
+            flex-grow: 1;
+            display: block;
+            input {
+              @include default-submit;
+            }
+          }
+          a {
+            flex-basis: 0;
+            flex-grow: 1;
+            padding: 10.5px 0;
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 145%;
+            text-align: center;
+            border: 1px solid #ed0073;
+            display: block;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            width: 100%;
+            transition: all $anim;
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                background: #FF27A2;
+              }
+            }
+            &:active {
+              background: #ED0073!important;
+            }
+          }
+        }
+      }
+    }
+    .sms-popup__right {
+      padding-top: 11px;
+      @media (max-width: 1000px) {
+        display: none;
+      }
+      .sms-popup__img {
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(90deg, rgba(237, 0, 115, 0.42) 0%, rgba(237, 0, 115, 0) 100%);
+          z-index: 10;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
   }
 }
 

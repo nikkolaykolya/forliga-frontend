@@ -60,6 +60,13 @@
           outline: none;
           box-sizing: border-box;
           color: white;
+          transition: all $anim;
+        }
+        &:focus {
+          border: 1px solid #FF27A2;
+        }
+        &:disabled {
+          border: 1px solid #969696;
         }
         &:before {
           content: "";
@@ -80,7 +87,6 @@
           width: 101%;
           display: none;
           flex-direction: column;
-          gap: 8px;
           max-height: 200px;
           overflow: auto;
           a {
@@ -92,6 +98,14 @@
             border-bottom: 1px solid #ED0073;
             &:last-child {
               border-bottom: none;
+            }
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                background: #FF27A2;
+              }
+            }
+            &:active {
+              background: #ED0073!important;
             }
           }
           &.show {
