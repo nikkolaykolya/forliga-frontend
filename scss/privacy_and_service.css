@@ -1993,7 +1993,7 @@ main {
   }
 }
 
-h1 {
+main h1 {
   font-weight: 500;
   font-size: 70px;
   line-height: 104px;
@@ -2003,45 +2003,44 @@ h1 {
   text-transform: uppercase;
 }
 @media (max-width: 1400px) {
-  h1 {
+  main h1 {
     font-size: 36px;
     line-height: 53px;
   }
 }
 @media (max-width: 750px) {
-  h1 {
+  main h1 {
     font-size: 40px;
     line-height: 59px;
     text-align: left;
     padding: 40px 0 29px;
   }
 }
-
-p {
+main p {
   font-size: 16px;
   line-height: 140%;
   padding-top: 32px;
 }
-p:first-child {
+main p:first-child {
   padding-top: 0;
 }
 @media (max-width: 1400px) {
-  p {
+  main p {
     font-size: 12px;
     line-height: 140%;
     padding-top: 25px;
   }
-  p:first-child {
+  main p:first-child {
     padding-top: 0;
   }
 }
 @media (max-width: 750px) {
-  p {
+  main p {
     font-size: 16px;
     line-height: 140%;
     padding-top: 33px;
   }
-  p:first-child {
+  main p:first-child {
     padding-top: 0;
   }
 }
