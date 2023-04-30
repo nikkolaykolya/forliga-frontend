@@ -22,7 +22,21 @@ body {
 
 main {
   margin-top: 121px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -121px;
+    left: 0;
+    width: 100%;
+    height: 121px;
+    background: url("../images/header/main_bg.png") no-repeat;
+    background-size: cover;
+  }
   @media (max-width: 1000px) {
     margin-top: 78px;
+    &:before {
+      height: 78px;
+    }
   }
 }

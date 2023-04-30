@@ -1,12 +1,21 @@
 header {
-  background: url("../images/header/main_bg.png") no-repeat;
-  background-size: cover;
   padding: 15px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
   .header__content {
     @include default-width;
     display: flex;
@@ -114,7 +123,15 @@ header {
             a {
               display: flex;
               align-items: center;
+              padding-bottom: 8px;
               gap: 10px;
+              border-bottom: 1px solid transparent;
+              transition: all $anim;
+              @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                  border-bottom: 1px solid #ED0073;
+                }
+              }
               svg {
                 fill: #005DDB;
                 transition: all $anim;
